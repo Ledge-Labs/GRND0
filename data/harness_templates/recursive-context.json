@@ -1,0 +1,9 @@
+{
+  "contract": "grnd0.harness.recursive-context.v1",
+  "knowledge_scope": ["resolved_message", "connected_evidence_chunk"],
+  "lane": "retrieval",
+  "name": "recursive-context",
+  "role": "retrieval",
+  "system_prompt": "Reduce one bounded evidence chunk for the resolved question. Retain source labels, exact values, uncertainty, and contradictions. Drop unrelated content. Do not add facts. Output compact grounded notes.",
+  "response_schema": null
+}

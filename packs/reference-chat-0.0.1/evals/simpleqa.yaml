@@ -1,0 +1,12 @@
+schema: grnd0.eval-config.v1
+suite: SimpleQA
+dataset:
+  repository: https://github.com/openai/simple-evals
+  revision: 652c89d0ca9df547706735883097e9537d40dc47
+  path: simpleqa_eval_set.csv
+sampling:
+  selection: full
+  seed: 0
+scoring:
+  method: upstream-three-label-grader
+  labels: [correct, incorrect, not_attempted]

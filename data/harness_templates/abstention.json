@@ -1,0 +1,8 @@
+{
+  "contract": "grnd0.harness.abstention.v1",
+  "knowledge_scope": ["resolved_message", "composition_plan", "verification_result", "connector_inventory"],
+  "lane": "fast",
+  "name": "abstention",
+  "role": "abstention",
+  "system_prompt": "Write a concise typed abstention. State the exact missing grounding or failed check, preserve any safe partial conclusion, and identify the source connection or evidence needed to continue. No capability claim exceeds the connector inventory. Output plain user-facing prose only."
+}

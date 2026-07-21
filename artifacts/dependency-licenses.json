@@ -1,0 +1,222 @@
+{
+  "container_images": [
+    {
+      "digest": "sha256:57cd7c3a7a273101a6485ba99423ee568157882804b1124b4dd04266317710de",
+      "license": "PSF-2.0 and bundled component licenses",
+      "reference": "python:3.12-slim"
+    },
+    {
+      "digest": "sha256:88359186a9024c4de0b0245c7001e39d5609e0aa0dafab3a0914e9419f258e28",
+      "license": "BSD-3-Clause and bundled component licenses",
+      "reference": "chromedp/headless-shell:stable"
+    },
+    {
+      "digest": "sha256:0bd98fa7977f1e75694779359ca4e212822e5a71334e28421182f72f209d5286",
+      "license": "Apache-2.0",
+      "reference": "qdrant/qdrant:latest"
+    },
+    {
+      "digest": "sha256:7dff60d7ea6df9d0bdf78971cdb1350e9b7df3fda5f115c77afe12122887bd64",
+      "license": "MIT",
+      "reference": "gitea/gitea:latest"
+    },
+    {
+      "digest": "sha256:5675b9cc658dcb9fb5eecbaa36a0ae480d7eeed01ef6299d4a9349dbefca158e",
+      "license": "MIT and bundled component licenses",
+      "reference": "ghcr.io/mostlygeek/llama-swap:v173-cpu-b7151"
+    }
+  ],
+  "python_dependencies": [
+    {
+      "description": "Reusable constraint types to use with typing.Annotated",
+      "license_expression": "MIT",
+      "name": "annotated-types",
+      "upstream": "https://github.com/annotated-types/annotated-types",
+      "version": "0.7.0"
+    },
+    {
+      "description": "High-level concurrency and networking framework on top of asyncio or Trio",
+      "license_expression": "MIT",
+      "name": "anyio",
+      "upstream": "https://anyio.readthedocs.io/en/stable/versionhistory.html",
+      "version": "4.14.2"
+    },
+    {
+      "description": "Python package for providing Mozilla's CA Bundle.",
+      "license_expression": "MPL-2.0",
+      "name": "certifi",
+      "upstream": "https://github.com/certifi/python-certifi",
+      "version": "2026.6.17"
+    },
+    {
+      "description": "Composable command line interface toolkit",
+      "license_expression": "BSD-3-Clause",
+      "name": "click",
+      "upstream": "https://github.com/pallets/click/",
+      "version": "8.4.2"
+    },
+    {
+      "description": "Cross-platform colored terminal text.",
+      "license_expression": "BSD-3-Clause",
+      "name": "colorama",
+      "upstream": "https://github.com/tartley/colorama",
+      "version": "0.4.6"
+    },
+    {
+      "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
+      "license_expression": "MIT",
+      "name": "fastapi",
+      "upstream": "https://github.com/fastapi/fastapi",
+      "version": "0.116.1"
+    },
+    {
+      "description": "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1",
+      "license_expression": "MIT",
+      "name": "h11",
+      "upstream": "https://github.com/python-hyper/h11",
+      "version": "0.16.0"
+    },
+    {
+      "description": "A minimal low-level HTTP client.",
+      "license_expression": "BSD-3-Clause",
+      "name": "httpcore",
+      "upstream": "https://www.encode.io/httpcore/",
+      "version": "1.0.9"
+    },
+    {
+      "description": "A collection of framework independent HTTP protocol utils.",
+      "license_expression": "MIT",
+      "name": "httptools",
+      "upstream": "https://github.com/MagicStack/httptools",
+      "version": "0.8.0"
+    },
+    {
+      "description": "The next generation HTTP client.",
+      "license_expression": "BSD-3-Clause",
+      "name": "httpx",
+      "upstream": "https://github.com/encode/httpx",
+      "version": "0.28.1"
+    },
+    {
+      "description": "Internationalized Domain Names in Applications (IDNA)",
+      "license_expression": "BSD-3-Clause",
+      "name": "idna",
+      "upstream": "https://github.com/kjd/idna",
+      "version": "3.18"
+    },
+    {
+      "description": "brain-dead simple config-ini parsing",
+      "license_expression": "MIT",
+      "name": "iniconfig",
+      "upstream": "https://github.com/pytest-dev/iniconfig",
+      "version": "2.3.0"
+    },
+    {
+      "description": "Core utilities for Python packages",
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "name": "packaging",
+      "upstream": "https://github.com/pypa/packaging",
+      "version": "26.2"
+    },
+    {
+      "description": "plugin and hook calling mechanisms for python",
+      "license_expression": "MIT",
+      "name": "pluggy",
+      "upstream": "UNKNOWN",
+      "version": "1.6.0"
+    },
+    {
+      "description": "Data validation using Python type hints",
+      "license_expression": "MIT",
+      "name": "pydantic",
+      "upstream": "https://github.com/pydantic/pydantic",
+      "version": "2.11.7"
+    },
+    {
+      "description": "Core functionality for Pydantic validation and serialization",
+      "license_expression": "MIT",
+      "name": "pydantic_core",
+      "upstream": "https://github.com/pydantic/pydantic-core",
+      "version": "2.33.2"
+    },
+    {
+      "description": "Pygments is a syntax highlighting package written in Python.",
+      "license_expression": "BSD-2-Clause",
+      "name": "Pygments",
+      "upstream": "https://pygments.org",
+      "version": "2.20.0"
+    },
+    {
+      "description": "pytest: simple powerful testing with Python",
+      "license_expression": "MIT",
+      "name": "pytest",
+      "upstream": "https://docs.pytest.org/en/latest/",
+      "version": "8.4.1"
+    },
+    {
+      "description": "Pytest support for asyncio",
+      "license_expression": "Apache-2.0",
+      "name": "pytest-asyncio",
+      "upstream": "https://github.com/pytest-dev/pytest-asyncio",
+      "version": "1.1.0"
+    },
+    {
+      "description": "Read key-value pairs from a .env file and set them as environment variables",
+      "license_expression": "BSD-3-Clause",
+      "name": "python-dotenv",
+      "upstream": "https://github.com/theskumar/python-dotenv",
+      "version": "1.2.2"
+    },
+    {
+      "description": "YAML parser and emitter for Python",
+      "license_expression": "MIT",
+      "name": "PyYAML",
+      "upstream": "https://pyyaml.org/",
+      "version": "6.0.2"
+    },
+    {
+      "description": "The little ASGI library that shines.",
+      "license_expression": "BSD-3-Clause",
+      "name": "starlette",
+      "upstream": "https://github.com/encode/starlette",
+      "version": "0.47.3"
+    },
+    {
+      "description": "Runtime typing introspection tools",
+      "license_expression": "MIT",
+      "name": "typing-inspection",
+      "upstream": "https://github.com/pydantic/typing-inspection",
+      "version": "0.4.2"
+    },
+    {
+      "description": "Backported and Experimental Type Hints for Python 3.9+",
+      "license_expression": "PSF-2.0",
+      "name": "typing_extensions",
+      "upstream": "https://github.com/python/typing_extensions",
+      "version": "4.16.0"
+    },
+    {
+      "description": "The lightning-fast ASGI server.",
+      "license_expression": "BSD-3-Clause",
+      "name": "uvicorn",
+      "upstream": "https://www.uvicorn.org/",
+      "version": "0.35.0"
+    },
+    {
+      "description": "Simple, modern and high performance file watching and code reload in python.",
+      "license_expression": "MIT",
+      "name": "watchfiles",
+      "upstream": "https://github.com/samuelcolvin/watchfiles",
+      "version": "1.2.0"
+    },
+    {
+      "description": "An implementation of the WebSocket Protocol (RFC 6455 & 7692)",
+      "license_expression": "BSD-3-Clause",
+      "name": "websockets",
+      "upstream": "https://github.com/python-websockets/websockets",
+      "version": "16.1.1"
+    }
+  ],
+  "schema": "grnd0.dependency-license-report.v1",
+  "status": "complete"
+}

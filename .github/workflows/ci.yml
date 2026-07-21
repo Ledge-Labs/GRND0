@@ -1,0 +1,28 @@
+name: public-release-checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      - uses: astral-sh/setup-uv@d0d8abe699bfb85fec6de9f7adb5ae17292296ff
+        with:
+          version: "0.9.8"
+          enable-cache: false
+      - run: uv sync --frozen
+      - run: uv run pytest
+      - run: python tools/leak-gate.py --root . --manifest release-manifest.yaml
+
+  clean-install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+      - shell: pwsh
+        run: ./tools/clean-install.ps1

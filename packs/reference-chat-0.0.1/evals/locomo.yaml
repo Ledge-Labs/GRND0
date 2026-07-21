@@ -1,0 +1,11 @@
+schema: grnd0.eval-config.v1
+suite: LoCoMo
+dataset:
+  repository: https://github.com/snap-research/locomo
+  revision: 3eb6f2c585f5e1699204e3c3bdf7adc5c28cb376
+  path: data/locomo10.json
+sampling:
+  selection: full
+  seed: 0
+scoring:
+  method: official-question-answering

@@ -1,0 +1,18 @@
+{
+  "backend": "operator-local-inference",
+  "backend_kind": "local",
+  "checks": [
+    "wsl_server_health",
+    "container_to_host_reachability",
+    "operator_local_tactical_route",
+    "operator_local_reasoning_route",
+    "receipt_backend_attribution"
+  ],
+  "lanes": [
+    "operator-local-reasoning",
+    "operator-local-tactical"
+  ],
+  "response_verification": "abstained_missing_grounding",
+  "schema": "grnd0.wsl-routing-proof.v1",
+  "status": "green"
+}

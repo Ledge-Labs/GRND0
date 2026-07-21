@@ -1,0 +1,42 @@
+{
+  "engines": {
+    "llama.cpp": {
+      "args": [
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "${PORT}",
+        "--model",
+        "{model_path}",
+        "--ctx-size",
+        "8192",
+        "--jinja"
+      ],
+      "check_endpoint": "/health",
+      "command": "/app/llama-server",
+      "idle_ttl_seconds": 300
+    },
+    "llama.cpp-vulkan": {
+      "args": [
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "${PORT}",
+        "--model",
+        "{model_path}",
+        "--ctx-size",
+        "8192",
+        "--n-gpu-layers",
+        "999",
+        "--flash-attn",
+        "on",
+        "--jinja"
+      ],
+      "check_endpoint": "/health",
+      "command": "/app/llama-server",
+      "idle_ttl_seconds": 300
+    }
+  },
+  "models": [],
+  "schema": "grnd0.model-catalog.v2"
+}

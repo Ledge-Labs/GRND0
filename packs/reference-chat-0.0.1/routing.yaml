@@ -1,0 +1,9 @@
+schema: grnd0.routing.v1
+provider: grnd0-local-inference
+routes:
+  reference-chat:
+    model: reference-primary
+    backend: local-inference
+    harness: reference-chat
+    temperature: 0.2
+    max_output_tokens: 4096

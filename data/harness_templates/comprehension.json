@@ -1,0 +1,23 @@
+{
+  "contract": "grnd0.harness.comprehension.v1",
+  "knowledge_scope": ["resolved_message", "conversation_spine", "connector_inventory"],
+  "lane": "fast",
+  "name": "comprehension",
+  "response_schema": {
+    "properties": {
+      "answer_needs": {"items": {"type": "string"}, "maxItems": 5, "type": "array"},
+      "aperture": {"enum": ["focused", "extended", "report"], "type": "string"},
+      "confidence": {"maximum": 1, "minimum": 0, "type": "number"},
+      "deliverable": {"enum": ["answer", "analysis", "strategy", "artifact", "question", "act"], "type": "string"},
+      "depth": {"enum": ["reflexive", "grounded", "deliberate", "deep"], "type": "string"},
+      "evidence": {"enum": ["session", "connected", "model", "none"], "type": "string"},
+      "intent": {"type": "string"},
+      "requires_grounding": {"type": "boolean"},
+      "verification": {"enum": ["grounded", "deliberation", "derivable", "none"], "type": "string"}
+    },
+    "required": ["intent", "deliverable", "evidence", "depth", "aperture", "verification", "answer_needs", "requires_grounding", "confidence"],
+    "type": "object"
+  },
+  "role": "comprehension",
+  "system_prompt": "Compose a typed execution plan for one resolved conversation turn. The plan states the deliverable, evidence source, thinking depth, answer aperture, verification frame, and answer requirements. Connected evidence is selected when operator sources can materially ground the request. Model evidence is selected for stable trained knowledge. Session evidence is selected for recap, continuation, or reasoning over prior turns. Grounding is required for source-bound, private, volatile, or explicitly evidentiary claims. Focused is the default aperture for a plain question. Report is valid only for an explicit deep or comprehensive request. Return only one JSON object matching the response contract."
+}

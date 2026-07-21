@@ -1,0 +1,25 @@
+{
+  "schema": "grnd0.knowledge-sources.v1",
+  "sources": [
+    {
+      "enabled": true,
+      "id": "grnd0-public",
+      "kind": "local_files",
+      "root": "../data/self_knowledge",
+      "trusted_public": true
+    },
+    {
+      "enabled": false,
+      "id": "operator-files",
+      "kind": "local_files",
+      "root": "/knowledge"
+    },
+    {
+      "enabled": false,
+      "id": "operator-vector",
+      "kind": "vector_http",
+      "query_url": "env:GRND0_VECTOR_QUERY_URL",
+      "token": "env:GRND0_VECTOR_TOKEN"
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+# SPDX-License-Identifier: MPL-2.0
+name: grnd0
+
+x-python-image: &python-image "python:3.12-slim@sha256:57cd7c3a7a273101a6485ba99423ee568157882804b1124b4dd04266317710de"
+x-common-environment: &common-environment
+  GRND0_BIND_HOST: ${GRND0_BIND_HOST:-127.0.0.1}
+  GRND0_AUTH_REQUIRED: ${GRND0_AUTH_REQUIRED:?tools/bootstrap-env.ps1 must generate .env}
+
+services:
+  inference_config:
+    build:
+      context: .
+      dockerfile: services/inference_gateway/Dockerfile
+      args:
+        PYTHON_IMAGE: *python-image
+    command:
+      - python
+      - tools/grnd0_models.py
+      - generate
+      - ${GRND0_INFERENCE_PACK:-reference-chat}
+      - --models-root
+      - /models
+      - --packs-root
+      - /operator-packs
+      - --catalog
+      - /app/configs/GRND0_MODEL_CATALOG.json
+      - --output
+      - /generated/llama-swap.yaml
+    user: "0:0"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,noexec,nosuid
+    volumes:
+      - "${GRND0_MODELS_PATH:-./models}:/models:ro"
+      - "${GRND0_PACKS_PATH:-./packs}:/operator-packs:ro"
+      - inference_config_state:/generated
+    restart: "no"
+
+  local_inference:
+    image: "${GRND0_INFERENCE_IMAGE:-ghcr.io/mostlygeek/llama-swap:v173-cpu-b7151@sha256:5675b9cc658dcb9fb5eecbaa36a0ae480d7eeed01ef6299d4a9349dbefca158e}"
+    entrypoint: ["/app/llama-swap", "-config", "/generated/llama-swap.yaml", "--listen", ":8080"]
+    read_only: true
+    tmpfs:
+      - /tmp:size=256m,nosuid
+    volumes:
+      - "${GRND0_MODELS_PATH:-./models}:/models:ro"
+      - inference_config_state:/generated:ro
+    ports:
+      - "${GRND0_BIND_HOST:-127.0.0.1}:${GRND0_INFERENCE_PORT:-9292}:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8080/"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+    depends_on:
+      inference_config:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  inference_gateway:
+    build:
+      context: .
+      dockerfile: services/inference_gateway/Dockerfile
+      args:
+        PYTHON_IMAGE: *python-image
+    environment:
+      <<: *common-environment
+      GRND0_GATEWAY_TOKEN: ${GRND0_GATEWAY_TOKEN:?tools/bootstrap-env.ps1 must generate .env}
+      GRND0_PROVIDER_BASE_URL: ${GRND0_PROVIDER_BASE_URL:-}
+      GRND0_PROVIDER_API_KEY: ${GRND0_PROVIDER_API_KEY:-}
+      GRND0_PROVIDER_MODEL: ${GRND0_PROVIDER_MODEL:-}
+      GRND0_ENABLE_CLOUD_ACCELERATOR: ${GRND0_ENABLE_CLOUD_ACCELERATOR:-0}
+      GRND0_ENABLE_HOST_GPU: ${GRND0_ENABLE_HOST_GPU:-0}
+      GRND0_HOST_GPU_BASE_URL: ${GRND0_HOST_GPU_BASE_URL:-http://host.docker.internal:9292/v1}
+      GRND0_ENABLE_OPERATOR_LOCAL: ${GRND0_ENABLE_OPERATOR_LOCAL:-0}
+      GRND0_OPERATOR_LOCAL_BASE_URL: ${GRND0_OPERATOR_LOCAL_BASE_URL:-http://host.docker.internal:9300/v1}
+      GRND0_LANES_PATH: /app/configs/lanes.example.json
+      GRND0_STUB_MODE: ${GRND0_STUB_MODE:-false}
+    volumes:
+      - "${GRND0_LANES_FILE:-./configs/lanes.example.json}:/app/configs/lanes.example.json:ro"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,noexec,nosuid
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8080/healthz', timeout=3).read()"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      local_inference:
+        condition: service_healthy
+    restart: unless-stopped
+
+  orchestrator:
+    build:
+      context: .
+      dockerfile: services/orchestrator_daemon/Dockerfile
+      args:
+        PYTHON_IMAGE: *python-image
+    environment:
+      <<: *common-environment
+      GRND0_API_KEY: ${GRND0_API_KEY:?tools/bootstrap-env.ps1 must generate .env}
+      GRND0_GATEWAY_TOKEN: ${GRND0_GATEWAY_TOKEN:?tools/bootstrap-env.ps1 must generate .env}
+      GRND0_GATEWAY_URL: http://inference_gateway:8080
+      GRND0_DATABASE_PATH: /var/lib/grnd0/state.sqlite
+      GRND0_HARNESS_PATH: /app/data/harness_templates
+      GRND0_LANES_PATH: /app/configs/lanes.example.json
+      GRND0_ENABLE_CLOUD_ACCELERATOR: ${GRND0_ENABLE_CLOUD_ACCELERATOR:-0}
+      GRND0_ENABLE_HOST_GPU: ${GRND0_ENABLE_HOST_GPU:-0}
+      GRND0_HOST_GPU_BASE_URL: ${GRND0_HOST_GPU_BASE_URL:-http://host.docker.internal:9292/v1}
+      GRND0_ENABLE_OPERATOR_LOCAL: ${GRND0_ENABLE_OPERATOR_LOCAL:-0}
+      GRND0_OPERATOR_LOCAL_BASE_URL: ${GRND0_OPERATOR_LOCAL_BASE_URL:-http://host.docker.internal:9300/v1}
+      GRND0_SOURCES_PATH: /app/configs/knowledge-sources.example.json
+      GRND0_AUTHORIZED_READ_ROOTS: ${GRND0_AUTHORIZED_READ_ROOTS:-[]}
+      GRND0_ALLOW_WEB: ${GRND0_ALLOW_WEB:-0}
+      GRND0_WEB_RESEARCH_URL: http://web_research:8080
+      GRND0_ALLOW_GIT: ${GRND0_ALLOW_GIT:-0}
+      GRND0_GITEA_URL: http://source_forge:3000
+      GRND0_GITEA_USERNAME: ${GRND0_GITEA_USERNAME:-grnd0-admin}
+      GRND0_GITEA_PASSWORD: ${GRND0_GITEA_PASSWORD:-}
+      GRND0_CAPABILITY_TOKEN: ${GRND0_CAPABILITY_TOKEN:-}
+      GRND0_DEBUG_ROUTES: ${GRND0_DEBUG_ROUTES:-false}
+    volumes:
+      - grnd0_state:/var/lib/grnd0
+      - "${GRND0_LANES_FILE:-./configs/lanes.example.json}:/app/configs/lanes.example.json:ro"
+    ports:
+      - "${GRND0_BIND_HOST:-127.0.0.1}:${GRND0_ORCHESTRATOR_PORT:-8000}:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz', timeout=3).read()"]
+      interval: 5s
+      timeout: 5s
+      retries: 18
+    depends_on:
+      inference_gateway:
+        condition: service_healthy
+    restart: unless-stopped
+
+  browser_harness:
+    image: "chromedp/headless-shell:stable@sha256:88359186a9024c4de0b0245c7001e39d5609e0aa0dafab3a0914e9419f258e28"
+    command: ["--headless", "--disable-gpu", "--no-sandbox", "--remote-debugging-address=0.0.0.0", "--remote-debugging-port=9222"]
+    shm_size: 1gb
+    read_only: true
+    tmpfs:
+      - /tmp:size=512m,nosuid
+    networks:
+      - web_egress
+    profiles: ["web", "full"]
+
+  web_research:
+    build:
+      context: .
+      dockerfile: services/web_research/Dockerfile
+      args:
+        PYTHON_IMAGE: *python-image
+    environment:
+      GRND0_CAPABILITY_TOKEN: ${GRND0_CAPABILITY_TOKEN:?tools/bootstrap-env.ps1 must generate .env}
+      GRND0_BROWSER_URL: http://browser_harness:9222
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,noexec,nosuid
+    depends_on:
+      browser_harness:
+        condition: service_started
+    networks:
+      - default
+      - web_egress
+    profiles: ["web", "full"]
+
+  source_forge:
+    image: "gitea/gitea:latest@sha256:7dff60d7ea6df9d0bdf78971cdb1350e9b7df3fda5f115c77afe12122887bd64"
+    environment:
+      GITEA__database__DB_TYPE: sqlite3
+      GITEA__security__INSTALL_LOCK: "true"
+      GITEA__service__DISABLE_REGISTRATION: "true"
+      GITEA__server__ROOT_URL: "http://${GRND0_BIND_HOST:-127.0.0.1}:${GRND0_GITEA_PORT:-3000}/"
+    volumes:
+      - source_forge_state:/data
+    ports:
+      - "${GRND0_BIND_HOST:-127.0.0.1}:${GRND0_GITEA_PORT:-3000}:3000"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://localhost:3000/api/healthz"]
+      interval: 5s
+      timeout: 5s
+      retries: 24
+    profiles: ["git", "full"]
+
+  source_forge_bootstrap:
+    image: "gitea/gitea:latest@sha256:7dff60d7ea6df9d0bdf78971cdb1350e9b7df3fda5f115c77afe12122887bd64"
+    user: git
+    entrypoint: ["/bin/sh", "-ec"]
+    command:
+      - >-
+        gitea admin user create --config /data/gitea/conf/app.ini --admin
+        --username "$${GRND0_GITEA_USERNAME}" --password "$${GRND0_GITEA_PASSWORD}"
+        --email "$${GRND0_GITEA_EMAIL}" --must-change-password=false ||
+        gitea admin user change-password --config /data/gitea/conf/app.ini
+        --username "$${GRND0_GITEA_USERNAME}" --password "$${GRND0_GITEA_PASSWORD}";
+        exec sleep 2147483647
+    environment:
+      GRND0_GITEA_USERNAME: ${GRND0_GITEA_USERNAME:-grnd0-admin}
+      GRND0_GITEA_PASSWORD: ${GRND0_GITEA_PASSWORD:?tools/bootstrap-env.ps1 must generate .env}
+      GRND0_GITEA_EMAIL: ${GRND0_GITEA_EMAIL:?tools/bootstrap-env.ps1 must generate .env}
+    volumes:
+      - source_forge_state:/data
+    depends_on:
+      source_forge:
+        condition: service_healthy
+    profiles: ["git", "full"]
+
+  retrieval:
+    image: "qdrant/qdrant:latest@sha256:0bd98fa7977f1e75694779359ca4e212822e5a71334e28421182f72f209d5286"
+    volumes:
+      - retrieval_state:/qdrant/storage
+    profiles: ["full"]
+
+volumes:
+  grnd0_state:
+  inference_config_state:
+  retrieval_state:
+  source_forge_state:
+
+networks:
+  web_egress:

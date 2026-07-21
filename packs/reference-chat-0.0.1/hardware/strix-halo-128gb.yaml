@@ -1,0 +1,12 @@
+schema: grnd0.hardware.v1
+name: strix-halo-128gb
+architecture: x86_64
+accelerator:
+  family: AMD Strix Halo
+  memory_gib: 128
+  memory_mode: unified
+runtime:
+  engine: llama.cpp-compatible
+  context_tokens: 32768
+  gpu_layers: 99
+  flash_attention: true

@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: MPL-2.0
+services:
+  orchestrator:
+    environment:
+      GRND0_AUTHORIZED_READ_ROOTS: '["/knowledge"]'
+    volumes:
+      - ${GRND0_KNOWLEDGE_HOST_PATH:?set an operator-granted knowledge path}:/knowledge:ro

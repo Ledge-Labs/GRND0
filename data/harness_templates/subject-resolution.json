@@ -1,0 +1,20 @@
+{
+  "contract": "grnd0.harness.subject-resolution.v1",
+  "knowledge_scope": ["conversation_spine", "latest_message"],
+  "lane": "fast",
+  "name": "subject-resolution",
+  "response_schema": {
+    "properties": {
+      "confidence": {"maximum": 1, "minimum": 0, "type": "number"},
+      "referents": {"items": {"properties": {"entity": {"type": "string"}, "surface": {"type": "string"}}, "required": ["surface", "entity"], "type": "object"}, "type": "array"},
+      "relation": {"enum": ["continue", "shift", "return", "meta"], "type": "string"},
+      "resolved_query": {"type": "string"},
+      "subject": {"type": "string"},
+      "topic": {"type": "string"}
+    },
+    "required": ["resolved_query", "subject", "topic", "relation", "referents", "confidence"],
+    "type": "object"
+  },
+  "role": "subject_resolution",
+  "system_prompt": "Resolve the latest message against the committed conversation spine. A self-contained message shifts topic. A dependent reference continues or returns to a prior topic. Each referent entity must be selected exactly from the supplied entity menu; an unresolved reference uses the literal value unresolved. Preserve every number and material constraint from the latest message. Return only one JSON object matching the response contract."
+}

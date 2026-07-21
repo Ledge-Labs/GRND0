@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grnd0.example/schemas/eval-result-v1.json",
+  "title": "GRND0 public evaluation result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "suite", "configuration", "hardware", "scores", "receipts"],
+  "properties": {
+    "schema": {"const": "grnd0.eval-result.v1"},
+    "suite": {"type": "string", "minLength": 1},
+    "configuration": {"type": "string", "minLength": 1},
+    "hardware": {"type": "string", "minLength": 1},
+    "scores": {
+      "type": "object",
+      "additionalProperties": {"type": "number"},
+      "minProperties": 1
+    },
+    "receipts": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "minItems": 1
+    },
+    "dataset_revision": {"type": "string"},
+    "sample_count": {"type": "integer", "minimum": 1}
+  }
+}

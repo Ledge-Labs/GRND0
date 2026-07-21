@@ -1,0 +1,788 @@
+{
+  "checks": [
+    "public_self_knowledge",
+    "dependent_subject_binding",
+    "focused_aperture",
+    "focused_branch_offer",
+    "structured_report_aperture",
+    "grounding_abstention",
+    "explicit_topic_return",
+    "ordered_recap",
+    "single_state_commit",
+    "backend_local",
+    "backend_id_host-gpu-inference"
+  ],
+  "duration_ms": 172079,
+  "provider_mode": "local-only",
+  "schema": "grnd0.drive-showcase.v1",
+  "session_id": "drive-47c3604d3e0c465fa0049ea76630183d",
+  "status": "green",
+  "transcript": [
+    {
+      "assistant": "GRND0 is a local-first compound-AI runtime that acts as a model endpoint, coordinating operator-configured models through typed comprehension, effort-aware routing, optional retrieval, aperture-controlled synthesis, verification, persistent conversation state, and execution receipts. It supports OpenAI-compatible chat completions and Anthropic-compatible messages, runs on model knowledge alone in its core profile, and can be extended with local documents, vector retrieval, web grounding, and a local repository service via explicit capability grants. The conversation spine maintains one authoritative state update per turn, with the last-turn receipt recording plan details, selected lanes, models, connected-source mode, verification result, and timing. The public distribution includes only runtime mechanisms and a minimal harness set, excluding private corpus, knowledge graph, self-knowledge, or premium capabilities.\n\n[source 1: grnd0-public | grnd0.md]\n\nPossible next directions:\n- Examine the mechanism through a concrete example.\n- Compare its behavior under different evidence conditions.\n- Expand the same question into a structured report.",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": false
+        },
+        "comprehension": {
+          "confidence": 0.95,
+          "intent": "define",
+          "relation": "shift",
+          "requires_grounding": true,
+          "resolved_query": "What is GRND0? Answer from connected public self-knowledge and label the source.",
+          "subject": "GRND0",
+          "topic": "definition of GRND0"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 1,
+          "prior_turn": 0
+        },
+        "duration_ms": 21470,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "definition of GRND0",
+            "source attribution",
+            "public self-knowledge"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [
+            {
+              "content_sha256": "f00f39fba2301de113f5397e71ead99351c598b1fde98e624b6f6578230fcf3a",
+              "locator": "grnd0.md",
+              "score": 0.75,
+              "source_id": "grnd0-public"
+            }
+          ],
+          "mode": "connected",
+          "notes": []
+        },
+        "route": [
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 1946,
+            "harness": "subject-resolution",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 2632,
+            "harness": "comprehension",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 9081,
+            "harness": "reference-chat",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 7798,
+            "harness": "verification",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-47c3604d3e0c465fa0049ea76630183d",
+        "synthesis": {
+          "mode": "single"
+        },
+        "turn_id": "turn_ec5370236d4447e28929bdb715d00dc5",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "The answer accurately reflects the content of the provided evidence (source grnd0.md), describing GRND0 as a local-first compound-AI runtime that acts as a model endpoint with specified features and capabilities. It is grounded in the public self-knowledge provided, includes relevant technical details, and correctly labels the source. All claims are supported by the evidence without unsupported assumptions or fabrications.",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "What is GRND0? Answer from connected public self-knowledge and label the source."
+    },
+    {
+      "assistant": "GRND0 preserves context between turns through a persistent conversation spine that commits one authoritative state update per completed turn. Each turn reads the previous state to resolve pronouns, continuations, topic returns, and recaps. The last-turn receipt records the plan, selected lanes and models, connected-source mode, verification result, and timing, ensuring continuity and traceability across interactions.\n\n[source 1: grnd0-public | grnd0.md]\n\nPossible next directions:\n- Explore how the state is stored (e.g., SQLite) and accessed during synthesis.\n- Investigate the impact of different aperture settings on context retention.\n- Analyze how retrieval or external sources affect state consistency.",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": false
+        },
+        "comprehension": {
+          "confidence": 0.92,
+          "intent": "continue",
+          "relation": "continue",
+          "requires_grounding": true,
+          "resolved_query": "How does GRND0 preserve context between turns?",
+          "subject": "GRND0",
+          "topic": "context preservation between turns"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 2,
+          "prior_turn": 1
+        },
+        "duration_ms": 19754,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "context preservation mechanism",
+            "GRND0-specific implementation"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [
+            {
+              "content_sha256": "f00f39fba2301de113f5397e71ead99351c598b1fde98e624b6f6578230fcf3a",
+              "locator": "grnd0.md",
+              "score": 0.166667,
+              "source_id": "grnd0-public"
+            }
+          ],
+          "mode": "connected",
+          "notes": []
+        },
+        "route": [
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 1963,
+            "harness": "subject-resolution",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 2270,
+            "harness": "comprehension",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 10100,
+            "harness": "reference-chat",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 5408,
+            "harness": "verification",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-47c3604d3e0c465fa0049ea76630183d",
+        "synthesis": {
+          "mode": "single"
+        },
+        "turn_id": "turn_f0d14cb45cc94f32a566121481446721",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "How does it preserve context between turns?"
+    },
+    {
+      "assistant": "GRND0's verification gate judges the completed focused answer or folded report once after synthesis. It operates as a final checkpoint, evaluating the output for accuracy, coherence, and adherence to the query and source constraints, without running a separate verification stage during section authoring. This ensures that only the final output is validated, maintaining consistency and reliability in the response lifecycle.\n\n[source 1: grnd0-public | grnd0.md]\n\nPossible next directions:\n- Examine how verification is implemented technically (e.g., via model or rule-based checks).\n- Compare verification behavior across different aperture modes (focused vs. report).\n- Explore how verification interacts with retrieval or external sources.",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": false
+        },
+        "comprehension": {
+          "confidence": 0.95,
+          "intent": "explain",
+          "relation": "continue",
+          "requires_grounding": true,
+          "resolved_query": "Give a focused explanation of GRND0's verification gate.",
+          "subject": "GRND0",
+          "topic": "verification gate"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 3,
+          "prior_turn": 2
+        },
+        "duration_ms": 16225,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "verification gate explanation"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [
+            {
+              "content_sha256": "f00f39fba2301de113f5397e71ead99351c598b1fde98e624b6f6578230fcf3a",
+              "locator": "grnd0.md",
+              "score": 0.8,
+              "source_id": "grnd0-public"
+            }
+          ],
+          "mode": "connected",
+          "notes": []
+        },
+        "route": [
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 1977,
+            "harness": "subject-resolution",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 4428,
+            "harness": "comprehension",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 5642,
+            "harness": "reference-chat",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 4164,
+            "harness": "verification",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-47c3604d3e0c465fa0049ea76630183d",
+        "synthesis": {
+          "mode": "single"
+        },
+        "turn_id": "turn_ff92397f21314c5da0f34cc3073bff56",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "The answer accurately reflects the evidence provided, stating that GRND0's verification gate evaluates the completed focused answer or folded report once after synthesis, without running a separate verification stage during section authoring. This aligns with the text in the evidence source (grnd0.md), which explicitly describes the verification gate as operating as a final checkpoint after synthesis and not during section authoring. The explanation is grounded, coherent, and directly supported by the source.",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "Give a focused explanation of its verification gate."
+    },
+    {
+      "assistant": "GRND0's report aperture enables structured, multi-section synthesis over a bounded working set with no final recompression, while the focused aperture delivers a single compact response with follow-up branches\u2014differing in planning, synthesis shape, verification behavior, and latency.\n\n## Planning Differences Between Focused and Report Apertures\n\nThe focused aperture employs a single compact synthesis call to generate a concise, direct response, followed by optional follow-up branches that expand on specific aspects of the answer. This approach prioritizes immediacy and simplicity, with no intermediate planning or section-level authoring. In contrast, the report aperture initiates a structured planning phase where an outline is generated, and non-overlapping sections are authored sequentially over a bounded working set. These sections are produced in plan order without intermediate model recompression, emphasizing organization and modularity. The planning process in the report mode is explicit and deliberate, enabling the system to decompose the query into discrete, coherent components before synthesis. This results in a more structured and segmented response path, distinct from the linear, single-output flow of the focused aperture. The core difference lies in the extent of pre-synthesis planning: the report aperture plans and organizes content in advance, while the focused aperture operates with minimal planning, relying on a single synthesis step to deliver the answer.\n\n## Synthesis Shape Under Each Aperture\n\nIn the focused aperture, synthesis occurs through a single compact call to the model, producing a condensed response that directly addresses the query. This output is generated without intermediate sectioning or structural planning and is finalized immediately after synthesis. Follow-up branches may then be initiated from this initial response, but these are not part of the primary synthesis phase and do not involve additional model recompression or reintegration of content.\n\nIn contrast, the report aperture employs a multi-stage synthesis process that begins with a plan outlining the structure of the response. The system then authors non-overlapping sections over a bounded working set, each developed independently within the same synthesis context. These sections are authored sequentially and folded together in the order specified by the plan, without undergoing a final model recompression pass. The synthesis shape thus reflects a modular, sectioned output that is assembled from discrete, logically separated components.\n\nBoth apertures operate within the same core synthesis framework\u2014using the model endpoint and relying on typed comprehension and effort-aware routing\u2014but differ fundamentally in how content is generated and assembled. The focused aperture prioritizes brevity and immediacy, while the report aperture emphasizes structure and modularity through explicit sectioning and sequential authoring.\n\n## Verification Behavior in Focused vs. Report Modes\n\nVerification behavior in focused and report apertures is governed by a single, final checkpoint that evaluates the completed output after synthesis, regardless of the aperture mode. In both focused and report modes, the verification gate judges the final result\u2014either the compact focused answer or the folded report\u2014once after synthesis. This means that section authoring does not include a separate verification stage; instead, verification occurs only at the conclusion of the synthesis process, ensuring consistency and reliability across both apertures.\n\nThe report aperture plans an outline, authors non-overlapping sections over a bounded working set, and folds them in plan order without a final model recompression pass. Despite this multi-stage synthesis, the verification gate still applies only to the final folded output, not to individual sections during authoring. Similarly, in the focused aperture, which uses one compact synthesis call and closes with follow-up branches, the verification occurs only after the final answer is generated, not during or between the branches.\n\nThis shared verification behavior ensures that both modes maintain the same level of accuracy, coherence, and adherence to the query and source constraints. The verification process is grounded in the final output, not in intermediate steps, and operates as a final checkpoint in the response lifecycle. No differences in verification mechanism, timing, or implementation are specified between the apertures in the available evidence.\n\n| Feature | Focused Aperture | Report Aperture |\n|--------|------------------|-----------------|\n| Verification stage | Final checkpoint after synthesis of the compact answer | Final checkpoint after folding the non-overlapping sections |\n| Timing of verification | Post-synthesis, after the single compact response is generated | Post-synthesis, after the report sections are folded in plan order |\n| Verification scope | Entire final focused answer | Entire folded report |\n| Verification during section authoring | No \u2014 verification occurs only at the end | No \u2014 verification occurs only at the end |\n| Verification mechanism | Grounded in final output, no intermediate checks | Grounded in final output, no intermediate checks |\n\n## Latency Tradeoffs Between Focused and Report Apertures\n\nGRND0\u2019s latency tradeoffs between focused and report apertures are directly tied to the synthesis and verification workflow under each mode. The focused aperture delivers a single, compact synthesis response with no intermediate section generation, resulting in lower synthesis latency due to the absence of planning, sectioning, or folding overhead. This streamlined path requires only one model call and concludes with follow-up branches if needed, minimizing time spent on structural decomposition and reassembly.\n\nIn contrast, the report aperture employs a multi-stage synthesis process: it first plans an outline, then authors non-overlapping sections over a bounded working set, and finally folds them in plan order without a final model recompression pass. This sequence introduces additional latency from planning and section-by-section generation, even though the final output is not recompressed. While the synthesis process is more structured and allows for greater depth in coverage, the cumulative time required to generate and assemble multiple sections increases overall latency compared to the focused mode.\n\nHowever, the bounded working set and verification behavior remain consistent across both apertures: the verification gate evaluates the final output\u2014either the focused answer or the folded report\u2014once after synthesis, with no separate verification stage during section authoring. This shared verification step ensures that latency is not further inflated by iterative validation during composition.\n\nThus, focused aperture exhibits lower latency due to its streamlined, single-call synthesis, while report aperture incurs higher latency from its multi-stage, sectioned synthesis process. No quantitative timing data or performance metrics are provided in the evidence to support specific latency differences in milliseconds or seconds. The tradeoff is therefore qualitative: focused mode prioritizes speed and simplicity, whereas report mode prioritizes structured depth at the cost of response time.",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": false
+        },
+        "comprehension": {
+          "confidence": 0.95,
+          "intent": "produce a comprehensive report comparing GRND0's focused and report apertures",
+          "relation": "continue",
+          "requires_grounding": true,
+          "resolved_query": "Produce a comprehensive report comparing GRND0's focused and report apertures in depth. Cover planning, synthesis shape, verification behavior, and latency tradeoffs.",
+          "subject": "GRND0",
+          "topic": "comparison of focused and report apertures in GRND0"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 4,
+          "prior_turn": 3
+        },
+        "duration_ms": 62013,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "planning differences between focused and report apertures",
+            "synthesis shape under each aperture",
+            "verification behavior in focused vs. report modes",
+            "latency tradeoffs between focused and report apertures"
+          ],
+          "aperture": "report",
+          "deliverable": "answer",
+          "depth": "deep",
+          "effort": 3,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [
+            {
+              "content_sha256": "f00f39fba2301de113f5397e71ead99351c598b1fde98e624b6f6578230fcf3a",
+              "locator": "grnd0.md",
+              "score": 0.266667,
+              "source_id": "grnd0-public"
+            }
+          ],
+          "mode": "connected",
+          "notes": []
+        },
+        "route": [
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 2660,
+            "harness": "subject-resolution",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 3785,
+            "harness": "comprehension",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 16166,
+            "harness": "synthesis-outline",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 7653,
+            "harness": "synthesis-section",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 6674,
+            "harness": "synthesis-section",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 11290,
+            "harness": "synthesis-section",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 9800,
+            "harness": "synthesis-section",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 3960,
+            "harness": "verification",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-47c3604d3e0c465fa0049ea76630183d",
+        "synthesis": {
+          "authored_sections": 4,
+          "mode": "structured",
+          "planned_sections": 4
+        },
+        "turn_id": "turn_d99b1096f4114ae5adcbcc25c549d4a6",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "Produce a comprehensive report comparing GRND0's focused and report apertures in depth. Cover planning, synthesis shape, verification behavior, and latency tradeoffs."
+    },
+    {
+      "assistant": "The claim \"What is [unknown-private-entity]?\" lacks connected evidence. No available information or source supports the existence or definition of [unknown-private-entity]. Abstaining due to missing grounding. Evidence linking to this term or entity is required to proceed.",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": false
+        },
+        "comprehension": {
+          "confidence": 0.7,
+          "intent": "identify",
+          "relation": "shift",
+          "requires_grounding": true,
+          "resolved_query": "What is [unknown-private-entity]? Use only connected evidence and abstain if none supports the answer.",
+          "subject": "[unknown-private-entity]",
+          "topic": "[unknown-private-entity]"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 5,
+          "prior_turn": 4
+        },
+        "duration_ms": 13024,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "definition",
+            "origin",
+            "purpose"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [],
+          "mode": "connected_no_hits",
+          "notes": []
+        },
+        "route": [
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 2518,
+            "harness": "subject-resolution",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 3616,
+            "harness": "comprehension",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 5259,
+            "harness": "reference-chat",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 1618,
+            "harness": "abstention",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-47c3604d3e0c465fa0049ea76630183d",
+        "synthesis": {
+          "mode": "single"
+        },
+        "turn_id": "turn_fd1155ab25a14b619faf47a18885a15f",
+        "verification": {
+          "failure_kind": "missing_grounding",
+          "gate": "deterministic",
+          "issues": [],
+          "note": "The requested claim lacks connected evidence.",
+          "passed": false,
+          "status": "abstained"
+        }
+      },
+      "user": "What is [unknown-private-entity]? Use only connected evidence and abstain if none supports the answer."
+    },
+    {
+      "assistant": "GRND0's last-turn receipt exposes the plan, selected lanes and models, connected-source mode, verification result, and timing of the most recent interaction. This record ensures continuity and traceability across turns by capturing key operational details of the turn's execution, including how the response was synthesized, which models or sources were used, and whether the output passed verification. The receipt serves as a persistent log of the system's decision-making and interaction state, enabling accurate context restoration for subsequent turns.\n\n[source 1: grnd0-public | grnd0.md]\n\nPossible next directions:  \n- Examine how the receipt is stored (e.g., in SQLite) and accessed during state updates.  \n- Investigate whether the receipt includes metadata about user intent or model effort.  \n- Compare receipt content across focused and report apertures.",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": false
+        },
+        "comprehension": {
+          "confidence": 0.95,
+          "intent": "retrieve specific information from a prior turn's receipt",
+          "relation": "return",
+          "requires_grounding": true,
+          "resolved_query": "Return to GRND0: what does GRND0's last-turn receipt expose?",
+          "subject": "GRND0",
+          "topic": "last-turn receipt exposure"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 6,
+          "prior_turn": 5
+        },
+        "duration_ms": 23798,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "explicit content of GRND0's last-turn receipt",
+            "what the receipt reveals about the system state or user interaction",
+            "any actionable insights or exposures from the receipt",
+            "context of when and why the receipt was generated",
+            "whether the receipt contains sensitive or private data"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [
+            {
+              "content_sha256": "f00f39fba2301de113f5397e71ead99351c598b1fde98e624b6f6578230fcf3a",
+              "locator": "grnd0.md",
+              "score": 0.6,
+              "source_id": "grnd0-public"
+            }
+          ],
+          "mode": "connected",
+          "notes": []
+        },
+        "route": [
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 2096,
+            "harness": "subject-resolution",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 6834,
+            "harness": "comprehension",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 11265,
+            "harness": "reference-chat",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 3579,
+            "harness": "verification",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-47c3604d3e0c465fa0049ea76630183d",
+        "synthesis": {
+          "mode": "single"
+        },
+        "turn_id": "turn_1ccf8c52919d4ac3a652e3488a6c827c",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "The answer accurately reflects the content of GRND0's last-turn receipt as stated in the evidence. The receipt exposes the plan, selected lanes and models, connected-source mode, verification result, and timing of the most recent interaction, which is directly supported by the provided source text.",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "Return to GRND0: what does its last-turn receipt expose?"
+    },
+    {
+      "assistant": "The conversation unfolds around two primary topics: GRND0 and [unknown-private-entity], with a clear chronological order of shifts.\n\n1. **Introduction to GRND0**: The conversation begins with a definition of GRND0 as a local-first compound-AI runtime that coordinates operator-configured models through typed comprehension, effort-aware routing, and persistent conversation state. It supports OpenAI- and Anthropic-compatible interfaces and can be extended with local documents, retrieval, and repository services. This establishes the foundational understanding of GRND0\u2019s architecture and capabilities.\n\n2. **Context Preservation Mechanism**: The discussion shifts to how GRND0 maintains context across turns via a persistent conversation spine that commits one authoritative state update per turn. The last-turn receipt records plan details, selected models, connected-source mode, verification result, and timing, ensuring continuity and traceability. This deepens the understanding of GRND0\u2019s operational flow and state management.\n\n3. **Verification Gate Function**: The conversation explores GRND0\u2019s verification gate, which acts as a final checkpoint evaluating the completed output\u2014whether focused or report\u2014for accuracy, coherence, and adherence to constraints. This ensures only the final response is validated, maintaining consistency in the response lifecycle.\n\n4. **Aperture Comparison (Focused vs. Report)**: A detailed comparison is presented between GRND0\u2019s focused and report apertures. The focused aperture delivers a single, compact response with optional follow-up branches, prioritizing immediacy and simplicity. The report aperture uses structured planning, multi-section synthesis, and sequential authoring over a bounded working set, emphasizing modularity and depth. Both share the same final verification step, but differ in planning, synthesis shape, and latency.\n\n5. **Last-Turn Receipt Details**: The conversation concludes with a focused explanation of what the last-turn receipt exposes\u2014its role in capturing operational details and enabling context restoration across interactions.\n\n6. **[unknown-private-entity]**: The query about [unknown-private-entity] is addressed with a clear abstention due to lack of connected evidence. No information supports its existence or definition.\n\nThe main shifts follow a logical progression from foundational definition to operational mechanics, then to response design (aperture modes), and finally to system-level logging and grounding. The order of topics reflects a structured exploration of GRND0\u2019s functionality, from core design to execution and verification.\n\nPossible next directions:\n- Examine the mechanism through a concrete example.\n- Compare its behavior under different evidence conditions.\n- Expand the same question into a structured report.",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": false
+        },
+        "comprehension": {
+          "confidence": 0.98,
+          "intent": "recap conversation by topic with preservation of main shifts",
+          "relation": "meta",
+          "requires_grounding": false,
+          "resolved_query": "Recap the conversation by topic and preserve the order of the main shifts.",
+          "subject": "conversation",
+          "topic": "conversation recap by topic with preservation of main shift order"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 7,
+          "prior_turn": 6
+        },
+        "duration_ms": 27176,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "topic-based organization",
+            "preservation of shift order",
+            "main thematic shifts",
+            "sequential flow",
+            "concise summary"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "session",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [],
+          "mode": "model_knowledge_only",
+          "notes": [
+            "retrieval_not_selected"
+          ]
+        },
+        "route": [
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 2263,
+            "harness": "subject-resolution",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 3337,
+            "harness": "comprehension",
+            "lane": "host-gpu-tactical",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 19788,
+            "harness": "reference-chat",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          },
+          {
+            "backend": "host-gpu-inference",
+            "backend_kind": "local",
+            "duration_ms": 1776,
+            "harness": "verification",
+            "lane": "host-gpu-reasoning",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-47c3604d3e0c465fa0049ea76630183d",
+        "synthesis": {
+          "mode": "single"
+        },
+        "turn_id": "turn_2d4a7816748f4685a76d3e8eb08f5966",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "Recap the conversation by topic and preserve the order of the main shifts."
+    }
+  ]
+}

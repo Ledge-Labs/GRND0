@@ -1,0 +1,12 @@
+models:
+  primary:
+    logical_name: reference-primary
+    upstream: Qwen/Qwen3-30B-A3B-Thinking-2507
+    upstream_revision: 144afc2f379b542fdd4e85a1fcd5e1f79112d95d
+    artifact: Qwen3-30B-A3B-Thinking-2507-UD-Q6_K_XL.gguf
+    quantization: UD-Q6_K_XL
+    artifact_repository: unsloth/Qwen3-30B-A3B-Thinking-2507-GGUF
+    artifact_revision: a9b37aaac12b2bd0098783a443429543dd76a14d
+    download: https://huggingface.co/unsloth/Qwen3-30B-A3B-Thinking-2507-GGUF/resolve/a9b37aaac12b2bd0098783a443429543dd76a14d/Qwen3-30B-A3B-Thinking-2507-UD-Q6_K_XL.gguf
+    sha256: 82c699d34b2ef9e471b807f3f333b2d8d89fb5341847caacedd4f19a8193f716
+    engine: llama.cpp

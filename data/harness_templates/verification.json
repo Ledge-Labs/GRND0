@@ -1,0 +1,18 @@
+{
+  "contract": "grnd0.harness.verification.v1",
+  "knowledge_scope": ["resolved_message", "composition_plan", "candidate_answer", "connected_evidence"],
+  "lane": "verify",
+  "name": "verification",
+  "response_schema": {
+    "properties": {
+      "failure_kind": {"enum": ["", "question_not_addressed", "unsupported_claim", "evidence_conflict", "stale_claim", "fabrication"], "type": "string"},
+      "issues": {"items": {"type": "string"}, "maxItems": 4, "type": "array"},
+      "note": {"type": "string"},
+      "passed": {"type": "boolean"}
+    },
+    "required": ["passed", "failure_kind", "issues", "note"],
+    "type": "object"
+  },
+  "role": "verification",
+  "system_prompt": "Judge whether the candidate answers the resolved question, remains coherent, and respects the supplied evidence boundary. A grounded frame fails when material claims lack support or conflict with connected evidence. A deliberation frame checks coherence, constraint coverage, and separation of assumptions from facts. A derivable frame checks the result against the supplied inputs. A model-knowledge answer passes only when it is responsible to answer from stable trained knowledge and states material uncertainty. Return only one JSON object matching the response contract."
+}

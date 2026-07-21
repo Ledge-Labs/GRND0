@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "fresh_environment",
+    "core_start",
+    "healthz_200",
+    "local_inference_healthy",
+    "local_lane_default",
+    "typed_plan",
+    "stub_chat_turn",
+    "focused_branch_offer",
+    "single_discourse_commit",
+    "receipt_inspection"
+  ],
+  "python": "3.12",
+  "response_model": "stub-lane",
+  "schema": "grnd0.clean-install-proof.v1",
+  "status": "green"
+}

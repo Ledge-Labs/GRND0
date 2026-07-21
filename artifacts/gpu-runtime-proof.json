@@ -1,0 +1,20 @@
+{
+  "backend": "host-gpu-inference",
+  "backend_kind": "local",
+  "checks": [
+    "vulkan_device_detected",
+    "gpu_server_health",
+    "host_gpu_tactical_route",
+    "host_gpu_reasoning_route",
+    "conversation_drive_green",
+    "receipt_backend_attribution"
+  ],
+  "device": "AMD Radeon(TM) 8060S Graphics",
+  "drive_duration_ms": 172079,
+  "lanes": [
+    "host-gpu-reasoning",
+    "host-gpu-tactical"
+  ],
+  "schema": "grnd0.gpu-runtime-proof.v1",
+  "status": "green"
+}

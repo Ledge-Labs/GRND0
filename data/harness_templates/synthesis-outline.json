@@ -1,0 +1,32 @@
+{
+  "contract": "grnd0.harness.synthesis-outline.v1",
+  "knowledge_scope": ["composition_plan", "conversation_spine", "connected_evidence", "client_system"],
+  "lane": "synthesis",
+  "name": "synthesis-outline",
+  "response_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "sections": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "covers": {"type": "string"},
+            "kind": {"enum": ["position", "context", "comparison", "mechanism", "implications", "options", "recommendation"]},
+            "title": {"type": "string"},
+            "wants_table": {"type": "boolean"}
+          },
+          "required": ["title", "covers", "kind", "wants_table"],
+          "type": "object"
+        },
+        "maxItems": 4,
+        "minItems": 3,
+        "type": "array"
+      },
+      "thesis": {"type": "string"}
+    },
+    "required": ["thesis", "sections"],
+    "type": "object"
+  },
+  "role": "synthesis_outline",
+  "system_prompt": "Plan the reader-facing answer over the supplied bounded working set. The thesis states the answer in one sentence. Provide three or four non-overlapping sections whose covers fields state the question each section answers. Explicit comparisons use a comparison section and a table when the dimensions support one. Every requested dimension must appear. Internal review, epistemic-status, evidence-validation, confidence-score, and process sections are forbidden. Return only the contracted JSON object."
+}

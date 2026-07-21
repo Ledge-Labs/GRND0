@@ -1,0 +1,45 @@
+{
+  "checks": [
+    "lane_health_local_and_cloud",
+    "one_turn_mixed_route",
+    "cloud_verification_lane"
+  ],
+  "duration_ms": 54902,
+  "fixture_scope": "The cloud-kind backend is a loopback OpenAI-compatible conformance fixture. This proves lane forwarding and receipt attribution, not cloud-model quality.",
+  "route": [
+    {
+      "backend": "local-inference",
+      "backend_kind": "local",
+      "duration_ms": 41607,
+      "harness": "subject-resolution",
+      "lane": "acceptance-local",
+      "model": "[configured-model]"
+    },
+    {
+      "backend": "local-inference",
+      "backend_kind": "local",
+      "duration_ms": 9578,
+      "harness": "comprehension",
+      "lane": "acceptance-local",
+      "model": "[configured-model]"
+    },
+    {
+      "backend": "local-inference",
+      "backend_kind": "local",
+      "duration_ms": 4735,
+      "harness": "reference-chat",
+      "lane": "acceptance-local",
+      "model": "[configured-model]"
+    },
+    {
+      "backend": "cloud-conformance",
+      "backend_kind": "cloud",
+      "duration_ms": 27,
+      "harness": "verification",
+      "lane": "cloud-verification",
+      "model": "[configured-model]"
+    }
+  ],
+  "schema": "grnd0.backend-routing-drive.v1",
+  "status": "green"
+}

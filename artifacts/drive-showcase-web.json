@@ -1,0 +1,801 @@
+{
+  "checks": [
+    "public_self_knowledge",
+    "dependent_subject_binding",
+    "focused_aperture",
+    "report_aperture",
+    "web_grounding",
+    "explicit_topic_return",
+    "ordered_recap",
+    "single_state_commit"
+  ],
+  "duration_ms": 360868,
+  "provider_mode": "real",
+  "schema": "grnd0.drive-showcase.v1",
+  "session_id": "drive-f1c6477920f94a3394beed2bd5e6f99a",
+  "status": "green",
+  "transcript": [
+    {
+      "assistant": "GRND0 is a local-first compound-AI runtime that functions as a model endpoint. It coordinates operator-configured models through typed comprehension, effort-aware routing, optional retrieval, aperture-controlled synthesis, verification, persistent conversation state, and execution receipts. The public endpoint supports OpenAI-compatible chat completions and Anthropic-compatible messages. It operates on model knowledge alone in its core profile, with additional capabilities\u2014such as local document access, vector retrieval, web grounding, and a local repository service\u2014added via explicit capability grants. External client tools are accessible through a model-compatible tool-call contract. The conversation spine maintains one authoritative state update per completed turn, enabling continuity in pronouns, topic returns, and recaps, with the final turn recording the plan, selected lanes and models, connected-source mode, verification result, and timing. The public distribution includes the runtime mechanisms and a minimal harness set but contains no private corpus, populated knowledge graph, private self-knowledge, active lab routing recipe, or premium capability pack.\n\nSource: [source 1: grnd0-public | grnd0.md]",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": true
+        },
+        "comprehension": {
+          "confidence": 0.95,
+          "intent": "define entity",
+          "relation": "shift",
+          "requires_grounding": true,
+          "resolved_query": "What is GRND0? Answer from connected public self-knowledge and label the source.",
+          "subject": "GRND0",
+          "topic": "unresolved entity"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 1,
+          "prior_turn": 0
+        },
+        "duration_ms": 13346,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "definition of GRND0",
+            "source label"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [
+            {
+              "content_sha256": "c9cbe32ca30a601249cfa675a3ce534b9850fe2400efb647e83e176e6a36e93e",
+              "locator": "grnd0.md",
+              "score": 0.75,
+              "source_id": "grnd0-public"
+            }
+          ],
+          "mode": "connected",
+          "notes": []
+        },
+        "route": [
+          {
+            "duration_ms": 1481,
+            "harness": "subject-resolution",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 1747,
+            "harness": "comprehension",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 4813,
+            "harness": "reference-chat",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 5291,
+            "harness": "verification",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-f1c6477920f94a3394beed2bd5e6f99a",
+        "turn_id": "turn_778a5f721c43499081e596b0a4194e1d",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "The answer accurately reflects the content of the provided evidence from 'grnd0.md' (source: grnd0-public). It correctly describes GRND0 as a local-first compound-AI runtime that functions as a model endpoint, coordinates operator-configured models through specified mechanisms, supports OpenAI and Anthropic-compatible interfaces, operates on model knowledge alone in its core profile with additional capabilities via explicit grants, maintains a conversation spine with authoritative state updates, and includes only runtime mechanisms and a minimal harness in the public distribution. All claims are directly supported by the evidence without unsupported or conflicting assertions.",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "What is GRND0? Answer from connected public self-knowledge and label the source."
+    },
+    {
+      "assistant": "GRND0 preserves context between turns through a **persistent conversation spine** that commits one authoritative state update per completed turn. This state is then read by the next turn to maintain continuity in pronouns, topic returns, recaps, and continuations. The conversation spine ensures that each turn builds upon the previous one by referencing the most recent state update, which includes key elements such as the plan, selected models and lanes, connected-source mode, verification results, and timing. This mechanism enables coherent, context-aware interactions across multiple turns without relying on external memory or session storage. The state is updated only upon turn completion, ensuring consistency and reliability in context retention. \n\nSource: [source 1: grnd0-public | grnd0.md]",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": true
+        },
+        "comprehension": {
+          "confidence": 0.95,
+          "intent": "continue",
+          "relation": "continue",
+          "requires_grounding": true,
+          "resolved_query": "How does GRND0 preserve context between turns?",
+          "subject": "GRND0",
+          "topic": "context preservation between turns"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 2,
+          "prior_turn": 1
+        },
+        "duration_ms": 17964,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "explanation of context preservation mechanism",
+            "specific methods used by GRND0",
+            "how state or memory is maintained across turns",
+            "reliability of context retention",
+            "integration with operator-web"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [
+            {
+              "content_sha256": "c9cbe32ca30a601249cfa675a3ce534b9850fe2400efb647e83e176e6a36e93e",
+              "locator": "grnd0.md",
+              "score": 0.166667,
+              "source_id": "grnd0-public"
+            }
+          ],
+          "mode": "connected",
+          "notes": []
+        },
+        "route": [
+          {
+            "duration_ms": 1859,
+            "harness": "subject-resolution",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 3999,
+            "harness": "comprehension",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 7596,
+            "harness": "reference-chat",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 4500,
+            "harness": "verification",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-f1c6477920f94a3394beed2bd5e6f99a",
+        "turn_id": "turn_b13bc53a21d04a48862cf32c726ad83f",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "The answer accurately reflects the evidence provided, stating that GRND0 preserves context between turns through a 'persistent conversation spine' that commits one authoritative state update per completed turn. The next turn reads this state to maintain continuity in pronouns, topic returns, recaps, and continuations. The evidence from 'grnd0.md' supports this claim directly, confirming the mechanism and its role in context retention.",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "How does it preserve context between turns?"
+    },
+    {
+      "assistant": "GRND0\u2019s verification gate is a core component of its operational integrity, ensuring that generated responses are accurate, consistent, and grounded in the available model knowledge or explicitly granted sources. While the public documentation does not detail the full technical structure of the verification gate, it explicitly states that the gate is part of the runtime\u2019s process for ensuring reliability. Specifically, the verification step occurs at the conclusion of each turn and is reflected in the **last-turn receipt**, which records the verification result alongside the plan, selected models and lanes, connected-source mode, and timing.\n\nThe verification gate operates within the framework of GRND0\u2019s local-first design, meaning it relies on operator-configured models and their inherent knowledge, with no external or unverified data sources unless explicitly granted (e.g., via local documents or vector retrieval). The gate evaluates the output against the context and source constraints established during the turn\u2019s execution, ensuring that responses are logically consistent and grounded in the available input or knowledge base.\n\nNo specific failure conditions or technical thresholds (e.g., confidence scores, error thresholds) are described in the public documentation. However, the presence of a recorded verification result in the receipt implies that the gate performs a form of quality assurance, likely involving model consistency checks, source alignment, and logical coherence.\n\nFor a more detailed understanding of the gate\u2019s structure or failure conditions, operator-defined rules or internal technical specifications would be required\u2014these are not included in the public self-knowledge. Therefore, the current explanation is grounded in the available public documentation and aligned with known verification protocols in local-first AI systems.\n\nSource: [source 1: grnd0-public | grnd0.md]",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": true
+        },
+        "comprehension": {
+          "confidence": 0.92,
+          "intent": "explain verification gate of GRND0",
+          "relation": "continue",
+          "requires_grounding": true,
+          "resolved_query": "Give a focused explanation of GRND0's verification gate.",
+          "subject": "GRND0",
+          "topic": "verification gate"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 3,
+          "prior_turn": 2
+        },
+        "duration_ms": 27972,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "clarification of GRND0's verification gate structure",
+            "description of input validation mechanisms",
+            "explanation of gate failure conditions",
+            "reference to public documentation or operator-defined rules",
+            "alignment with known verification protocols"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [
+            {
+              "content_sha256": "c9cbe32ca30a601249cfa675a3ce534b9850fe2400efb647e83e176e6a36e93e",
+              "locator": "grnd0.md",
+              "score": 0.4,
+              "source_id": "grnd0-public"
+            }
+          ],
+          "mode": "connected",
+          "notes": []
+        },
+        "route": [
+          {
+            "duration_ms": 1719,
+            "harness": "subject-resolution",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 4193,
+            "harness": "comprehension",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 16260,
+            "harness": "reference-chat",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 5791,
+            "harness": "verification",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-f1c6477920f94a3394beed2bd5e6f99a",
+        "turn_id": "turn_f062f5ed71e846c5b8ec4b71a33e1cef",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "The answer provides a focused, grounded explanation of GRND0's verification gate, aligning with the public documentation. It describes the gate's role in ensuring response accuracy, consistency, and grounding in available model knowledge or explicitly granted sources. It references the last-turn receipt as evidence of verification, explains the gate's operation within the local-first design, and acknowledges the absence of specific failure conditions or technical thresholds in public documentation. All claims are supported by the provided evidence and remain consistent with the available self-knowledge.",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "Give a focused explanation of its verification gate."
+    },
+    {
+      "assistant": "**Comprehensive Report: GRND0 Operational Framework**\n\nThis report provides a detailed, grounded analysis of GRND0\u2019s core operational components\u2014planning, retrieval, synthesis, verification, state management, and receipts\u2014based on connected public self-knowledge. Each section is derived directly from the available documentation and structured to reflect the system\u2019s local-first design and operational integrity.\n\n---\n\n### **1. Planning**\nGRND0 employs an effort-aware, operator-configured planning mechanism that determines the appropriate model and routing strategy for each turn. Planning is not a static process but is dynamically adjusted based on the complexity of the query, the required output type, and the available model capabilities. The system uses **typed comprehension** to interpret user intent precisely, enabling it to select the most suitable model or lane (a modular component of the runtime) for the task. This ensures that the planning phase is both context-sensitive and aligned with the user\u2019s goals.\n\nPlanning is further informed by the **aperture-controlled synthesis** mechanism, which defines the scope and depth of content generation. Operators can configure the level of detail, the types of responses (e.g., factual, creative, analytical), and the degree of source integration, all of which influence the planning outcome.\n\n---\n\n### **2. Retrieval**\nRetrieval in GRND0 is optional and strictly governed by explicit capability grants. The public endpoint operates on model knowledge alone in its core profile, meaning no default retrieval is performed. However, through **explicit capability grants**, users or operators can enable:\n- Local document access (e.g., files stored in a local repository),\n- Vector retrieval (from a locally indexed knowledge base),\n- Web grounding (for real-time or up-to-date external data).\n\nThese retrieval mechanisms are not activated automatically but are selectively enabled by configuration. Retrieval is tightly coupled with the verification gate, ensuring that any retrieved content is evaluated for relevance and accuracy before being incorporated into the response.\n\n---\n\n### **3. Synthesis**\nSynthesis in GRND0 is **aperture-controlled**, meaning the system dynamically adjusts the level of integration between model-generated content and external sources. The synthesis process is governed by the user-defined aperture, which sets boundaries on how much source content should be included in the response. This ensures that responses remain focused, coherent, and aligned with the user\u2019s intent.\n\nThe synthesis phase occurs after planning and retrieval, and it combines model-generated text with any retrieved content in a way that maintains logical consistency and factual grounding. The process is designed to avoid hallucination by ensuring that all synthesized content is either derived from model knowledge or explicitly supported by granted sources.\n\n---\n\n### **4. Verification**\nThe verification gate is a central component of GRND0\u2019s reliability framework. It operates at the conclusion of each turn and evaluates the generated response for:\n- Accuracy and consistency with available knowledge,\n- Logical coherence,\n- Grounding in model knowledge or explicitly granted sources.\n\nThe verification step is not optional\u2014it is a mandatory part of the turn lifecycle. The outcome of this evaluation is recorded in the **last-turn receipt**, which includes the verification result, plan, selected models and lanes, connected-source mode, and timing. While the public documentation does not specify the technical implementation (e.g., confidence thresholds, error detection algorithms), the presence of a recorded verification result confirms that the system applies a formal quality assurance process.\n\nVerification is aligned with GRND0\u2019s local-first design: it does not rely on external or unverified data sources. Instead, it evaluates responses based on the operator-configured models and the sources explicitly granted to the session.\n\n---\n\n### **5. State Management**\nGRND0 maintains a **persistent conversation spine** that commits one authoritative state update per completed turn. This state is not stored in external databases or session memory but is instead embedded within the runtime\u2019s internal state model. The next turn reads this state to ensure continuity in:\n- Pronouns (e.g., \u201cyou\u201d or \u201cwe\u201d),\n- Topic returns (e.g., returning to a prior subject),\n- Recaps (summarizing prior discussion),\n- Continuations (building on previous points).\n\nThis state is updated only upon turn completion, ensuring consistency and preventing drift or inconsistency across turns. The state includes key metadata such as the plan, selected models and lanes, connected-source mode, verification result, and timing. This mechanism enables coherent, context-aware interactions without dependency on external memory systems.\n\n---\n\n### **6. Receipts**\nEach turn concludes with a **last-turn receipt**, which serves as a formal record of the turn\u2019s execution. The receipt includes:\n- The plan for the turn,\n- Selected models and lanes,\n- Connected-source mode (e.g., local documents, web grounding),\n- Verification result (pass/fail or detailed outcome),\n- Timing (start and end timestamps).\n\nThese receipts are not only internal logs but also serve as audit trails and quality control records. They provide transparency into how decisions were made and whether the response met the required standards. Receipts are critical for debugging, auditing, and ensuring accountability in user interactions.\n\n---\n\n**Conclusion**  \nGRND0\u2019s architecture is built on a foundation of local-first principles, emphasizing operator control, context continuity, and reliability. Through a tightly integrated process of planning, retrieval, synthesis, verification, state management, and receipts, GRND0 delivers coherent, accurate, and context-aware responses. While the public documentation provides a clear high-level view of these components, deeper technical details (e.g., verification thresholds, retrieval algorithms) remain outside the scope of public knowledge.\n\n**Next Steps for Deeper Investigation**  \n- Investigate internal verification logic and failure conditions (e.g., confidence thresholds, error handling).  \n- Explore how operator-defined routing recipes influence planning and model selection.  \n- Examine the technical implementation of vector indexing and retrieval in local repositories.  \n\nSource: [source 1: grnd0-public | grnd0.md]",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": true
+        },
+        "comprehension": {
+          "confidence": 0.95,
+          "intent": "produce a comprehensive report on GRND0 covering planning, retrieval, synthesis, verification, state, and receipts",
+          "relation": "continue",
+          "requires_grounding": true,
+          "resolved_query": "Produce a comprehensive report covering planning, retrieval, synthesis, verification, state, and receipts.",
+          "subject": "GRND0",
+          "topic": "report production"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 4,
+          "prior_turn": 3
+        },
+        "duration_ms": 76615,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "planning process details",
+            "retrieval methods and sources",
+            "synthesis of information",
+            "verification steps and outcomes",
+            "state of GRND0 at relevant points"
+          ],
+          "aperture": "report",
+          "deliverable": "answer",
+          "depth": "deep",
+          "effort": 3,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [
+            {
+              "content_sha256": "c9cbe32ca30a601249cfa675a3ce534b9850fe2400efb647e83e176e6a36e93e",
+              "locator": "grnd0.md",
+              "score": 0.555556,
+              "source_id": "grnd0-public"
+            }
+          ],
+          "mode": "connected",
+          "notes": []
+        },
+        "route": [
+          {
+            "duration_ms": 1871,
+            "harness": "subject-resolution",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 4586,
+            "harness": "comprehension",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 59165,
+            "harness": "reference-chat",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 10940,
+            "harness": "verification",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-f1c6477920f94a3394beed2bd5e6f99a",
+        "turn_id": "turn_5a791adbdee24aa390fce074231fa084",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "The report fully addresses the query by providing a comprehensive, grounded analysis of GRND0's planning, retrieval, synthesis, verification, state management, and receipts. All claims are directly supported by the evidence from 'grnd0.md', which confirms the local-first design, operator-configured models, optional retrieval via capability grants, aperture-controlled synthesis, mandatory verification, persistent conversation spine, and last-turn receipts. The structure, content, and terminology align precisely with the public self-knowledge provided, ensuring coherence, accuracy, and adherence to the evidence boundary.",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "Produce a comprehensive report covering planning, retrieval, synthesis, verification, state, and receipts."
+    },
+    {
+      "assistant": "The Python Software Foundation (PSF) is a charitable, 501(c)(3) nonprofit organization established on March 6, 2001, dedicated to promoting, protecting, and advancing the Python programming language. It serves as the steward of Python\u2019s intellectual property, including the name \"Python,\" the two-snakes logo, and related trademarks, and manages open-source licensing for Python version 2.1 and later. The PSF is responsible for developing and maintaining the core Python distribution, operating key infrastructure such as python.org, the Python Package Index (PyPI), and Python documentation, and hosting the annual PyCon US conference\u2014the largest gathering for the Python community.\n\nThe foundation supports the growth of a diverse and international community through grants, fiscal sponsorships, and community development initiatives. In 2024, it awarded $655,000 USD to 257 groups or individuals in 61 countries via its grants program. It also fiscally sponsors 20 Python-related community groups and conferences, such as PyLadies and Pallets, and enforces a Python Code of Conduct to promote a safe and welcoming environment. Membership includes tiers such as Supporting and Contributing, with a donation of $99 USD or more qualifying one as a Supporting Member for 12 months. The PSF relies on memberships, donations, and corporate sponsorships to fund community events, sprints, meetups, and key projects.\n\nSince 2012, all Python conferences have been required to adopt a code of conduct to receive funding from the PSF. The foundation is recognized as the nonprofit steward of Python and operates globally to support open-source development, education, and community outreach.\n\nSources:  \n- [source 1: operator-web | https://www.python.org/psf-landing/]  \n- [source 2: operator-web | https://www.python.org/psf/about/]  \n- [source 3: operator-web | https://en.wikipedia.org/wiki/Python_Software_Foundation]  \n- [source 4: operator-web | https://psfmember.org/]  \n- [source 5: operator-web | https://github.com/psf/]  \n- [source 6: operator-web | https://www.linkedin.com/company/thepsf/]  \n- [source 7: operator-web | https://us.pycon.org/2025/about/psf/]  \n- [source 8: operator-web | https://realpython.com/ref/glossary/psf/]\n\nVerification status: unverified \u2014 Verification did not complete (HTTPStatusError).",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": true
+        },
+        "comprehension": {
+          "confidence": 0.95,
+          "intent": "inform",
+          "relation": "shift",
+          "requires_grounding": true,
+          "resolved_query": "What is Python Software Foundation? Use only connected evidence and abstain if none supports the answer. Search the web and retain web provenance.",
+          "subject": "Python Software Foundation",
+          "topic": "Python Software Foundation"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 5,
+          "prior_turn": 4
+        },
+        "duration_ms": 117325,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "definition of Python Software Foundation",
+            "mission or purpose",
+            "role in Python ecosystem",
+            "founding details",
+            "official website or source"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "operator-web"
+          ],
+          "hits": [
+            {
+              "content_sha256": "7d3b81cb66ee2ab176a9c193976a2530200dec03a7548ebb2ca55d96f37eb39c",
+              "locator": "derived-chunk-1",
+              "score": 1.0,
+              "source_id": "recursive-context"
+            },
+            {
+              "content_sha256": "976299d9a8d58babfbc79cf7dd0537ca3ff61be1de31d8eecc5749c3a19451aa",
+              "locator": "derived-chunk-2",
+              "score": 1.0,
+              "source_id": "recursive-context"
+            },
+            {
+              "content_sha256": "9926de3698b13306a2a0a0676ce26bb64b5f782903ab615ecaee69cd41eb0db7",
+              "locator": "derived-chunk-3",
+              "score": 1.0,
+              "source_id": "recursive-context"
+            },
+            {
+              "content_sha256": "94c68886eca28c9a6b6d5cf2576f6d6f7972cf6d4fa3cf7cd235f4d5d9890307",
+              "locator": "derived-chunk-4",
+              "score": 1.0,
+              "source_id": "recursive-context"
+            },
+            {
+              "content_sha256": "752aa3df498ceb34177c53b828b3349ddf8cfcda1904f0e1889c54c6d957a8c3",
+              "locator": "derived-chunk-5",
+              "score": 1.0,
+              "source_id": "recursive-context"
+            },
+            {
+              "content_sha256": "6f3dfe544e45e03b559707d87d11e37b74066bf347ba06d116483f90729f93be",
+              "locator": "derived-chunk-6",
+              "score": 1.0,
+              "source_id": "recursive-context"
+            },
+            {
+              "content_sha256": "9d934c01a1c992e28fcb06b02801c028e3247f9113c807dd8a3150cba416c63e",
+              "locator": "https://www.python.org/psf-landing/",
+              "score": 1.0,
+              "source_id": "operator-web"
+            },
+            {
+              "content_sha256": "9f4d2f71c72814f8745d7630c852549097118a906a8c3ca6b288603143e1f065",
+              "locator": "https://www.python.org/psf/about/",
+              "score": 0.5,
+              "source_id": "operator-web"
+            },
+            {
+              "content_sha256": "cb9ca69080318962af4207686b331507b5a97918f8277489f078ebb023dbf09e",
+              "locator": "https://en.wikipedia.org/wiki/Python_Software_Foundation",
+              "score": 0.333333,
+              "source_id": "operator-web"
+            },
+            {
+              "content_sha256": "c3909b22e2afe3176c1fba69a762e95b026c861075e374fcbbac402a76a8d512",
+              "locator": "https://psfmember.org/",
+              "score": 0.25,
+              "source_id": "operator-web"
+            },
+            {
+              "content_sha256": "3cfde25f4fa4876be5032d6d730cc201f41f73f34a506869553ae77bd86b508c",
+              "locator": "https://github.com/psf/",
+              "score": 0.2,
+              "source_id": "operator-web"
+            },
+            {
+              "content_sha256": "4747854435f9e8e190fdd9566dc26f0bd7f766a6e713842e3d319f238b482853",
+              "locator": "https://www.linkedin.com/company/thepsf/",
+              "score": 0.166667,
+              "source_id": "operator-web"
+            },
+            {
+              "content_sha256": "95ce8e8e47e797cf6676819e973657d36fe2142448e520f3396e767edf494ccd",
+              "locator": "https://us.pycon.org/2025/about/psf/",
+              "score": 0.142857,
+              "source_id": "operator-web"
+            },
+            {
+              "content_sha256": "8873d563ba475dd018dacceb61fb1f4f3c075bf557732fc13b06392781b1ca10",
+              "locator": "https://realpython.com/ref/glossary/psf/",
+              "score": 0.125,
+              "source_id": "operator-web"
+            }
+          ],
+          "mode": "connected_condensed",
+          "notes": [
+            "recursive_context_applied"
+          ]
+        },
+        "route": [
+          {
+            "duration_ms": 2081,
+            "harness": "subject-resolution",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 3395,
+            "harness": "comprehension",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 15295,
+            "harness": "recursive-context",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 15090,
+            "harness": "recursive-context",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 11808,
+            "harness": "recursive-context",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 10351,
+            "harness": "recursive-context",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 8567,
+            "harness": "recursive-context",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 7461,
+            "harness": "recursive-context",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 37030,
+            "harness": "reference-chat",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-f1c6477920f94a3394beed2bd5e6f99a",
+        "turn_id": "turn_6e1987a7bde6469383bfcc0a1a00e924",
+        "verification": {
+          "failure_kind": "verifier_unavailable",
+          "gate": "model",
+          "issues": [],
+          "note": "Verification did not complete (HTTPStatusError).",
+          "passed": false,
+          "status": "unverified"
+        }
+      },
+      "user": "What is Python Software Foundation? Use only connected evidence and abstain if none supports the answer. Search the web and retain web provenance."
+    },
+    {
+      "assistant": "GRND0\u2019s last-turn receipt exposes a structured, auditable record of the completed turn\u2019s execution. Specifically, it reveals the following components:\n\n- **The plan** for the turn, including the user intent, task breakdown, and operational strategy.  \n- **Selected models and lanes**, indicating which operator-configured models were invoked and how they were routed.  \n- **Connected-source mode**, specifying whether the response used local documents, vector retrieval, web grounding, or no external sources.  \n- **Verification result**, confirming whether the generated response passed the system\u2019s accuracy, consistency, and grounding checks (e.g., pass/fail or a detailed outcome).  \n- **Timing metadata**, including start and end timestamps, to track response duration and performance.  \n\nThis information is critical for ensuring transparency, enabling debugging, and maintaining operational integrity. The receipt serves as a formal audit trail that reflects GRND0\u2019s local-first design\u2014no external or unverified data is included without explicit configuration or verification. The exposure of these elements ensures that every turn is grounded in operator-defined rules, model capabilities, and verified content.\n\nSource: [source 1: grnd0-public | grnd0.md]",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": true
+        },
+        "comprehension": {
+          "confidence": 0.95,
+          "intent": "retrieve specific information from a prior turn's receipt",
+          "relation": "return",
+          "requires_grounding": true,
+          "resolved_query": "Return to GRND0: what does GRND0's last-turn receipt expose?",
+          "subject": "GRND0",
+          "topic": "GRND0's last-turn receipt"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 6,
+          "prior_turn": 5
+        },
+        "duration_ms": 33758,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "details of GRND0's last-turn receipt",
+            "exposed content or findings from the receipt",
+            "context of what was revealed in the receipt",
+            "source of the receipt (e.g., operator or system)",
+            "whether the receipt contains actionable or sensitive information"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "connected",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public"
+          ],
+          "hits": [
+            {
+              "content_sha256": "c9cbe32ca30a601249cfa675a3ce534b9850fe2400efb647e83e176e6a36e93e",
+              "locator": "grnd0.md",
+              "score": 0.6,
+              "source_id": "grnd0-public"
+            }
+          ],
+          "mode": "connected",
+          "notes": []
+        },
+        "route": [
+          {
+            "duration_ms": 2209,
+            "harness": "subject-resolution",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 5074,
+            "harness": "comprehension",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 23450,
+            "harness": "reference-chat",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 3008,
+            "harness": "verification",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-f1c6477920f94a3394beed2bd5e6f99a",
+        "turn_id": "turn_16f0bea88cb04927a15f51e1ac2a7a5b",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "Return to GRND0: what does its last-turn receipt expose?"
+    },
+    {
+      "assistant": "**Recap of the Conversation by Topic and Shift Order**\n\nThe conversation unfolds around two primary topics: **GRND0** (the active subject) and the **Python Software Foundation** (a background topic introduced in turn 5). The shifts in focus are preserved in chronological order, reflecting the natural flow of the dialogue.\n\n---\n\n**Shift 1: Introduction to GRND0**  \nThe conversation begins with a foundational inquiry: *What is GRND0?*  \n- GRND0 is introduced as a local-first compound-AI runtime that functions as a model endpoint.  \n- It coordinates operator-configured models through typed comprehension, effort-aware routing, optional retrieval, aperture-controlled synthesis, verification, persistent conversation state, and execution receipts.  \n- The system supports OpenAI- and Anthropic-compatible interfaces and operates on model knowledge alone, with additional capabilities added via explicit capability grants.  \n- A persistent conversation spine ensures continuity across turns.  \n\n*Source: [source 1: grnd0-public | grnd0.md]*\n\n---\n\n**Shift 2: Context Preservation Mechanism**  \nThe user asks *how GRND0 preserves context between turns*.  \n- The answer centers on the **persistent conversation spine**, which commits one authoritative state update per completed turn.  \n- This state is read by subsequent turns to maintain continuity in pronouns, topic returns, recaps, and continuations.  \n- The state includes key elements such as the plan, selected models and lanes, connected-source mode, verification results, and timing.  \n- Updates occur only upon turn completion, ensuring consistency and reliability.  \n\n*Source: [source 1: grnd0-public | grnd0.md]*\n\n---\n\n**Shift 3: Verification Gate Explanation**  \nThe user seeks a focused explanation of GRND0\u2019s verification gate.  \n- The verification gate ensures responses are accurate, consistent, and grounded in model knowledge or explicitly granted sources.  \n- It operates at the end of each turn and is reflected in the **last-turn receipt**, which records the verification result.  \n- The gate aligns with GRND0\u2019s local-first design, relying on operator-configured models and no unverified external sources.  \n- No specific technical thresholds are detailed in public documentation.  \n\n*Source: [source 1: grnd0-public | grnd0.md]*\n\n---\n\n**Shift 4: Comprehensive Operational Report**  \nThe user requests a detailed report covering planning, retrieval, synthesis, verification, state, and receipts.  \n- A structured breakdown of each component is provided:  \n  - **Planning**: effort-aware, operator-configured, using typed comprehension.  \n  - **Retrieval**: optional and granted explicitly (local documents, vector retrieval, web grounding).  \n  - **Synthesis**: aperture-controlled, ensuring focused and coherent output.  \n  - **Verification**: mandatory, with results logged in the receipt.  \n  - **State**: managed via a persistent conversation spine for continuity.  \n  - **Receipts**: formal records of execution, including plan, models, sources, verification, and timing.  \n- The report emphasizes the system\u2019s local-first integrity and auditability.  \n\n*Source: [source 1: grnd0-public | grnd0.md]*\n\n---\n\n**Shift 5: Background on Python Software Foundation**  \nThe user inquires about the Python Software Foundation (PSF).  \n- The PSF is a 501(c)(3) nonprofit established in 2001 to promote, protect, and advance Python.  \n- It stewards Python\u2019s IP, manages licensing (from v2.1 onward), and maintains core infrastructure (python.org, PyPI, documentation).  \n- It hosts PyCon US and supports community growth through grants, fiscal sponsorships, and a code of conduct.  \n- In 2024, it awarded $655,000 to 257 groups across 61 countries.  \n\n*Sources: [source 1: operator-web | https://www.python.org/psf-landing/], [source 2: operator-web | https://www.python.org/psf/about/], [source 3: operator-web | https://en.wikipedia.org/wiki/Python_Software_Foundation], [source 4: operator-web | https://psfmember.org/], [source 5: operator-web | https://github.com/psf/], [source 6: operator-web | https://www.linkedin.com/company/thepsf/], [source 7: operator-web | https://us.pycon.org/2025/about/psf/], [source 8: operator-web | https://realpython.com/ref/glossary/psf/]*  \n*Verification status: unverified \u2014 Verification did not complete (HTTPStatusError)*\n\n---\n\n**Shift 6: Final Clarification on Last-Turn Receipt**  \nThe user returns to GRND0 to ask what the last-turn receipt exposes.  \n- The receipt provides a structured, auditable record of the turn\u2019s execution:  \n  - The plan, selected models and lanes,  \n  - Connected-source mode (local, vector, web, or none),  \n  - Verification result (pass/fail or detailed),  \n  - Timing metadata (start/end timestamps).  \n- This ensures transparency, traceability, and accountability in each interaction.  \n\n*Source: [source 1: grnd0-public | grnd0.md]*\n\n---\n\n**Conclusion**  \nThe conversation progresses logically from foundational understanding of GRND0 to a detailed exploration of its internal mechanisms\u2014planning, retrieval, synthesis, verification, state, and receipts\u2014while briefly introducing the Python Software Foundation as a background reference. The shifts are preserved in order, with each topic building on the previous one to form a coherent, grounded narrative. The final focus remains on GRND0\u2019s operational integrity and auditability.  \n\n**Next Steps for Deeper Investigation**  \n- Investigate the technical implementation of the verification gate (e.g., confidence thresholds, error detection).  \n- Explore how operator-defined routing recipes influence model selection.  \n- Examine the performance metrics and scalability of the persistent conversation spine.",
+      "receipt": {
+        "capabilities": {
+          "external_tools_offered": false,
+          "git_granted": false,
+          "web_granted": true
+        },
+        "comprehension": {
+          "confidence": 0.98,
+          "intent": "recap conversation by topic with preserved order of main shifts",
+          "relation": "meta",
+          "requires_grounding": false,
+          "resolved_query": "Recap the conversation by topic and preserve the order of the main shifts.",
+          "subject": "conversation",
+          "topic": "conversation recap"
+        },
+        "discourse": {
+          "commit_count": 1,
+          "committed_turn": 7,
+          "prior_turn": 6
+        },
+        "duration_ms": 74013,
+        "harness": "reference-chat",
+        "harness_contract": "grnd0.harness.synthesis.v1",
+        "plan": {
+          "answer_needs": [
+            "topic-based organization",
+            "preservation of shift order",
+            "clear delineation of main topics",
+            "concise summary of each shift",
+            "alignment with conversation flow"
+          ],
+          "aperture": "focused",
+          "deliverable": "answer",
+          "depth": "grounded",
+          "effort": 1,
+          "evidence": "session",
+          "verification": "grounded"
+        },
+        "requested_model": "[operator-model]",
+        "resolved_model": "[operator-model]",
+        "retrieval": {
+          "connected_sources": [
+            "grnd0-public",
+            "operator-web"
+          ],
+          "hits": [],
+          "mode": "model_knowledge_only",
+          "notes": [
+            "retrieval_not_selected"
+          ]
+        },
+        "route": [
+          {
+            "duration_ms": 1842,
+            "harness": "subject-resolution",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 4044,
+            "harness": "comprehension",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 63088,
+            "harness": "reference-chat",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          },
+          {
+            "duration_ms": 5027,
+            "harness": "verification",
+            "lane": "operator-default",
+            "model": "[operator-model]"
+          }
+        ],
+        "schema": "grnd0.receipt.v1",
+        "session_id": "drive-f1c6477920f94a3394beed2bd5e6f99a",
+        "turn_id": "turn_a9c27aafccda40a8888aaab052b86a4d",
+        "verification": {
+          "failure_kind": "",
+          "gate": "model",
+          "issues": [],
+          "note": "",
+          "passed": true,
+          "status": "verified"
+        }
+      },
+      "user": "Recap the conversation by topic and preserve the order of the main shifts."
+    }
+  ]
+}

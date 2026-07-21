@@ -1,0 +1,10 @@
+name: reference-chat
+version: 0.0.1
+contract: grnd0.pack.chat.v1
+endpoint_contracts:
+  - openai.chat-completions.v1
+  - anthropic.messages.v1
+harness: reference-chat
+routing: routing.yaml
+models: models.yaml
+hardware: hardware/strix-halo-128gb.yaml

@@ -1,0 +1,28 @@
+# SPDX-License-Identifier: MPL-2.0
+[project]
+name = "grnd0"
+version = "0.0.1"
+description = "Local model coordination behind model-compatible endpoints"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi==0.116.1",
+  "httpx==0.28.1",
+  "pydantic==2.11.7",
+  "PyYAML==6.0.2",
+  "uvicorn[standard]==0.35.0",
+]
+
+[dependency-groups]
+dev = [
+  "pytest==8.4.1",
+  "pytest-asyncio==1.1.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+pythonpath = ["services/orchestrator_daemon", "."]
+
+[tool.uv]
+package = false

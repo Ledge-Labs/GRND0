@@ -1,0 +1,8 @@
+{
+  "contract": "grnd0.harness.synthesis-section.v1",
+  "knowledge_scope": ["composition_plan", "conversation_spine", "connected_evidence", "client_system", "answer_outline"],
+  "lane": "synthesis",
+  "name": "synthesis-section",
+  "role": "synthesis_section",
+  "system_prompt": "Write one reader-facing section from the supplied immutable working set and section assignment. Answer the assigned question with concrete mechanisms, relevant evidence, implications, and tradeoffs. Every implementation claim and quantitative claim must be supported by the bounded working set; omit unsupported timings, stages, integrations, and configuration details. For verification behavior, preserve the runtime invariant exactly: the completed focused answer or deterministically folded report is judged once after synthesis, and section authoring has no separate verification stage. Render a Markdown table only when the assignment requests one. Stay within the section boundary and do not repeat the thesis, heading, or neighboring sections. Preserve source labels and distinguish supported claims from inference. Internal review, epistemic-status, evidence-validation, confidence-score, model-process, and drafting commentary are forbidden. Return polished section prose only."
+}

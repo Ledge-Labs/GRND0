@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "web_profile_start",
+    "browser_backed_fetch",
+    "web_receipt_provenance",
+    "git_profile_start",
+    "generated_gitea_credential_authentication",
+    "git_connector_grant",
+    "browser_core_network_isolation",
+    "loopback_port_binding"
+  ],
+  "profiles": {
+    "git": "green",
+    "web": "green"
+  },
+  "schema": "grnd0.capability-profile-proof.v1",
+  "status": "green"
+}

@@ -1,0 +1,108 @@
+{
+  "backends": {
+    "cloud-accelerator": {
+      "api_key_env": "GRND0_PROVIDER_API_KEY",
+      "base_url_env": "GRND0_PROVIDER_BASE_URL",
+      "enable_env": "GRND0_ENABLE_CLOUD_ACCELERATOR",
+      "enabled": false,
+      "kind": "cloud",
+      "model_env": "GRND0_PROVIDER_MODEL",
+      "note": "GRND0 is local-first. This backend is an explicit fallback or hard-lane accelerator; routing whole sessions to cloud is expensive and usually redundant."
+    },
+    "local-inference": {
+      "base_url": "http://local_inference:8080/v1",
+      "enabled": true,
+      "kind": "local"
+    },
+    "host-gpu-inference": {
+      "base_url_env": "GRND0_HOST_GPU_BASE_URL",
+      "enable_env": "GRND0_ENABLE_HOST_GPU",
+      "enabled": false,
+      "kind": "local",
+      "note": "Native host GPU serving uses the same local trust boundary and remains an explicit operator grant."
+    },
+    "operator-local-inference": {
+      "base_url_env": "GRND0_OPERATOR_LOCAL_BASE_URL",
+      "enable_env": "GRND0_ENABLE_OPERATOR_LOCAL",
+      "enabled": false,
+      "kind": "local",
+      "note": "A host or WSL OpenAI-compatible service enters only through an explicit local capability grant."
+    }
+  },
+  "lanes": [
+    {
+      "backend": "host-gpu-inference",
+      "enable_env": "GRND0_ENABLE_HOST_GPU",
+      "enabled": false,
+      "max_effort": 1,
+      "min_effort": 0,
+      "model": "reference-primary",
+      "name": "host-gpu-tactical",
+      "priority": 5,
+      "roles": ["comprehension", "subject_resolution", "abstention", "fast"]
+    },
+    {
+      "backend": "local-inference",
+      "max_effort": 1,
+      "min_effort": 0,
+      "model": "reference-primary",
+      "name": "local-tactical",
+      "priority": 10,
+      "roles": ["comprehension", "subject_resolution", "abstention", "fast"]
+    },
+    {
+      "backend": "operator-local-inference",
+      "enable_env": "GRND0_ENABLE_OPERATOR_LOCAL",
+      "enabled": false,
+      "max_effort": 1,
+      "min_effort": 0,
+      "model": "reference-primary",
+      "name": "operator-local-tactical",
+      "priority": 6,
+      "roles": ["comprehension", "subject_resolution", "abstention", "fast"]
+    },
+    {
+      "backend": "host-gpu-inference",
+      "enable_env": "GRND0_ENABLE_HOST_GPU",
+      "enabled": false,
+      "max_effort": 3,
+      "min_effort": 0,
+      "model": "reference-primary",
+      "name": "host-gpu-reasoning",
+      "priority": 15,
+      "roles": ["synthesis", "verification", "retrieval", "verify"]
+    },
+    {
+      "backend": "local-inference",
+      "max_effort": 3,
+      "min_effort": 0,
+      "model": "reference-primary",
+      "name": "local-reasoning",
+      "priority": 20,
+      "roles": ["synthesis", "verification", "retrieval", "verify"]
+    },
+    {
+      "backend": "operator-local-inference",
+      "enable_env": "GRND0_ENABLE_OPERATOR_LOCAL",
+      "enabled": false,
+      "max_effort": 3,
+      "min_effort": 0,
+      "model": "reference-primary",
+      "name": "operator-local-reasoning",
+      "priority": 16,
+      "roles": ["synthesis", "verification", "retrieval", "verify"]
+    },
+    {
+      "backend": "cloud-accelerator",
+      "enable_env": "GRND0_ENABLE_CLOUD_ACCELERATOR",
+      "enabled": false,
+      "max_effort": 3,
+      "min_effort": 2,
+      "model": "operator-configured",
+      "name": "cloud-accelerator",
+      "priority": 90,
+      "roles": ["accelerator"]
+    }
+  ],
+  "schema": "grnd0.lanes.v2"
+}

@@ -1,0 +1,1420 @@
+{
+  "binary_policy": {
+    "approved_images": [
+      "assets/brand/grnd0-logo.png",
+      "assets/showcase/captures/01.png",
+      "assets/showcase/captures/02.png",
+      "assets/showcase/captures/03.png",
+      "assets/showcase/captures/04.png",
+      "assets/showcase/captures/05.png",
+      "assets/showcase/captures/06.png",
+      "assets/showcase/captures/07.png",
+      "assets/showcase/captures/08.png",
+      "assets/showcase/captures/09.png",
+      "assets/showcase/captures/10.png",
+      "assets/showcase/captures/11.png",
+      "assets/showcase/captures/12.png",
+      "assets/showcase/captures/13.png",
+      "assets/showcase/captures/14.png",
+      "assets/showcase/captures/15.png",
+      "assets/showcase/captures/16.png"
+    ]
+  },
+  "entries": [
+    {
+      "dest": ".dockerignore",
+      "path": "release/sources/.dockerignore",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": ".env.example",
+      "path": "release/sources/.env.example",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": ".github/workflows/ci.yml",
+      "path": "release/sources/.github/workflows/ci.yml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": ".gitignore",
+      "path": "release/sources/.gitignore",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "CHANGELOG.md",
+      "path": "release/sources/CHANGELOG.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "CODE_OF_CONDUCT.md",
+      "path": "release/sources/CODE_OF_CONDUCT.md",
+      "provenance": {
+        "classification": "C",
+        "license": "CC-BY-4.0",
+        "modifications": "enforcement contact set to repository security-advisory channel",
+        "required_attribution": "Contributor Covenant version and source",
+        "upstream_repo": "https://www.contributor-covenant.org/version/2/1/code_of_conduct.html",
+        "upstream_revision": "2.1"
+      }
+    },
+    {
+      "dest": "CONTRIBUTING.md",
+      "path": "release/sources/CONTRIBUTING.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "DEVELOPMENT.md",
+      "path": "release/sources/DEVELOPMENT.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "LICENSE",
+      "path": "release/sources/LICENSE",
+      "provenance": {
+        "classification": "C",
+        "license": "MPL-2.0",
+        "modifications": "none",
+        "required_attribution": "unaltered license text",
+        "upstream_repo": "https://www.mozilla.org/MPL/2.0/",
+        "upstream_revision": "2.0"
+      }
+    },
+    {
+      "dest": "LICENSING.md",
+      "path": "release/sources/LICENSING.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "NOTICE",
+      "path": "release/sources/NOTICE",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "README.md",
+      "path": "release/sources/README.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "RESULTS.md",
+      "path": "release/sources/RESULTS.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "SECURITY.md",
+      "path": "release/sources/SECURITY.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "THIRD_PARTY_NOTICES.md",
+      "path": "release/artifacts/THIRD_PARTY_NOTICES.md",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated release artifact"
+      }
+    },
+    {
+      "dest": "TRADEMARKS.md",
+      "path": "release/sources/TRADEMARKS.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "artifacts/clean-install-proof.json",
+      "path": "release/artifacts/clean-install-proof.json",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated release artifact"
+      }
+    },
+    {
+      "dest": "artifacts/capability-profile-proof.json",
+      "path": "release/artifacts/capability-profile-proof.json",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated from staged capability-profile verification"
+      }
+    },
+    {
+      "dest": "artifacts/drive-showcase-no-web.json",
+      "path": "release/artifacts/drive-showcase-no-web.json",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated by the real-provider conversation drive with sensitive values normalized"
+      }
+    },
+    {
+      "dest": "artifacts/drive-showcase-web.json",
+      "path": "release/artifacts/drive-showcase-web.json",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated by the real-provider web-grounding drive with sensitive values normalized"
+      }
+    },
+    {
+      "dest": "artifacts/drive-showcase-local.json",
+      "path": "release/artifacts/drive-showcase-local.json",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated by the real-model local-only bundled inference drive with model identity normalized"
+      }
+    },
+    {
+      "dest": "artifacts/drive-showcase-gpu.json",
+      "path": "release/artifacts/drive-showcase-gpu.json",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated by the real-model native Vulkan drive with model identity normalized"
+      }
+    },
+    {
+      "dest": "artifacts/gpu-runtime-proof.json",
+      "path": "release/artifacts/gpu-runtime-proof.json",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated from Vulkan device discovery and native GPU route verification"
+      }
+    },
+    {
+      "dest": "artifacts/wsl-routing-proof.json",
+      "path": "release/artifacts/wsl-routing-proof.json",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated by the real-model WSL routing verification with private runtime paths omitted"
+      }
+    },
+    {
+      "dest": "artifacts/drive-backend-routing-mixed.json",
+      "path": "release/artifacts/drive-backend-routing-mixed.json",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated by mixed local and cloud-compatible backend routing verification"
+      }
+    },
+    {
+      "dest": "artifacts/dependency-licenses.json",
+      "path": "release/artifacts/dependency-licenses.json",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated release artifact"
+      }
+    },
+    {
+      "dest": "artifacts/leak-gate-report.json",
+      "generator": "leak_report",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated by fail-closed leak gate"
+      }
+    },
+    {
+      "dest": "artifacts/provenance-ledger.csv",
+      "generator": "provenance_ledger",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated from manifest provenance records"
+      }
+    },
+    {
+      "dest": "artifacts/sbom.spdx.json",
+      "path": "release/artifacts/sbom.spdx.json",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated release artifact"
+      }
+    },
+    {
+      "dest": "assets/brand/grnd0-logo.png",
+      "generator": "logo_png",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "deterministic clean-room raster generation"
+      },
+      "text": false
+    },
+    {
+      "dest": "assets/showcase/README.md",
+      "path": "release/sources/assets/showcase/README.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "assets/showcase/TRANSCRIPT.md",
+      "path": "release/sources/assets/showcase/TRANSCRIPT.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "configs/GRND0_MODEL_CATALOG.json",
+      "path": "release/sources/configs/GRND0_MODEL_CATALOG.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "configs/GRND0_MODEL_INVENTORY.json",
+      "path": "release/sources/configs/GRND0_MODEL_INVENTORY.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "compose.knowledge.example.yml",
+      "path": "release/sources/compose.knowledge.example.yml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "configs/knowledge-sources.example.json",
+      "path": "release/sources/configs/knowledge-sources.example.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "configs/lanes.example.json",
+      "path": "release/sources/configs/lanes.example.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "configs/mcp/connections.yaml",
+      "path": "release/sources/configs/mcp/connections.yaml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "data/harness_templates/abstention.json",
+      "path": "release/sources/data/harness_templates/abstention.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      }
+    },
+    {
+      "dest": "data/harness_templates/comprehension.json",
+      "path": "release/sources/data/harness_templates/comprehension.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      }
+    },
+    {
+      "dest": "data/harness_templates/recursive-context.json",
+      "path": "release/sources/data/harness_templates/recursive-context.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "data/harness_templates/reference-chat.json",
+      "path": "release/sources/data/harness_templates/reference-chat.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "data/harness_templates/synthesis-outline.json",
+      "path": "release/sources/data/harness_templates/synthesis-outline.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      }
+    },
+    {
+      "dest": "data/harness_templates/synthesis-section.json",
+      "path": "release/sources/data/harness_templates/synthesis-section.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      }
+    },
+    {
+      "dest": "data/harness_templates/subject-resolution.json",
+      "path": "release/sources/data/harness_templates/subject-resolution.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      }
+    },
+    {
+      "dest": "data/harness_templates/verification.json",
+      "path": "release/sources/data/harness_templates/verification.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      }
+    },
+    {
+      "dest": "data/self_knowledge/grnd0.md",
+      "path": "release/sources/data/self_knowledge/grnd0.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "derived only from public GRND0 documentation"
+      }
+    },
+    {
+      "dest": "docker-compose.yml",
+      "path": "release/sources/docker-compose.yml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "grnd0",
+      "path": "release/sources/grnd0",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 local model operations"
+      }
+    },
+    {
+      "dest": "grnd0.ps1",
+      "path": "release/sources/grnd0.ps1",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 local model operations"
+      }
+    },
+    {
+      "dest": "models/README.md",
+      "path": "release/sources/models/README.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for the public model-store convention"
+      }
+    },
+    {
+      "dest": "docs/CONCEPTS.md",
+      "path": "release/sources/docs/CONCEPTS.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "docs/ARCHITECTURE.md",
+      "path": "release/sources/docs/ARCHITECTURE.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "docs/CONNECTING-DATA.md",
+      "path": "release/sources/docs/CONNECTING-DATA.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "docs/DIRECTION.md",
+      "path": "release/sources/docs/DIRECTION.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "docs/INFERENCE.md",
+      "path": "release/sources/docs/INFERENCE.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for the GRND0 local inference layer"
+      }
+    },
+    {
+      "dest": "docs/EXTENDING.md",
+      "path": "release/sources/docs/EXTENDING.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "evals/public/README.md",
+      "path": "release/sources/evals/public/README.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "evals/public/result.schema.json",
+      "path": "release/sources/evals/public/result.schema.json",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "packs/reference-chat-0.0.1/README.md",
+      "path": "release/sources/packs/reference-chat-0.0.1/README.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "packs/reference-chat-0.0.1/evals/locomo.yaml",
+      "path": "release/sources/packs/reference-chat-0.0.1/evals/locomo.yaml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "packs/reference-chat-0.0.1/evals/simpleqa.yaml",
+      "path": "release/sources/packs/reference-chat-0.0.1/evals/simpleqa.yaml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "packs/reference-chat-0.0.1/hardware/strix-halo-128gb.yaml",
+      "path": "release/sources/packs/reference-chat-0.0.1/hardware/strix-halo-128gb.yaml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "packs/reference-chat-0.0.1/models.yaml",
+      "path": "release/sources/packs/reference-chat-0.0.1/models.yaml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "packs/reference-chat-0.0.1/pack.yaml",
+      "path": "release/sources/packs/reference-chat-0.0.1/pack.yaml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "packs/reference-chat-0.0.1/routing.yaml",
+      "path": "release/sources/packs/reference-chat-0.0.1/routing.yaml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "pyproject.toml",
+      "path": "release/sources/pyproject.toml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "release-manifest.yaml",
+      "path": "release-manifest.yaml",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "explicit public allowlist"
+      }
+    },
+    {
+      "dest": "sdk/LICENSE",
+      "path": "release/sources/sdk/LICENSE",
+      "provenance": {
+        "classification": "C",
+        "license": "Apache-2.0",
+        "modifications": "none",
+        "required_attribution": "unaltered license text",
+        "upstream_repo": "https://www.apache.org/licenses/LICENSE-2.0",
+        "upstream_revision": "2.0"
+      }
+    },
+    {
+      "dest": "sdk/README.md",
+      "path": "release/sources/sdk/README.md",
+      "provenance": {
+        "classification": "A",
+        "license": "Apache-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    },
+    {
+      "dest": "sdk/python/grnd0/__init__.py",
+      "license": "Apache-2.0",
+      "path": "release/sources/sdk/python/grnd0/__init__.py",
+      "provenance": {
+        "classification": "A",
+        "license": "Apache-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "sdk/python/grnd0/client.py",
+      "license": "Apache-2.0",
+      "path": "release/sources/sdk/python/grnd0/client.py",
+      "provenance": {
+        "classification": "A",
+        "license": "Apache-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "scripts/drive-showcase.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/scripts/drive-showcase.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "scripts/drive-backend-routing.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/scripts/drive-backend-routing.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for per-lane backend routing verification"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "scripts/openai-conformance-fixture.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/scripts/openai-conformance-fixture.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written as a routing-only OpenAI compatibility fixture"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/inference_gateway/Dockerfile",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/inference_gateway/Dockerfile",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/inference_gateway/app/__init__.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/inference_gateway/app/__init__.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/inference_gateway/app/main.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/inference_gateway/app/main.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/Dockerfile",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/Dockerfile",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/__init__.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/__init__.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/api/__init__.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/api/__init__.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/api/routes.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/api/routes.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/cognitive_loop/__init__.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/cognitive_loop/__init__.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/cognitive_loop/comprehension.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/cognitive_loop/comprehension.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/cognitive_loop/discourse.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/cognitive_loop/discourse.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/cognitive_loop/loop.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/cognitive_loop/loop.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/cognitive_loop/provider.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/cognitive_loop/provider.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/cognitive_loop/structured_synthesis.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/cognitive_loop/structured_synthesis.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/cognitive_loop/recursive_context.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/cognitive_loop/recursive_context.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/cognitive_loop/routing.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/cognitive_loop/routing.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/cognitive_loop/types.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/cognitive_loop/types.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/cognitive_loop/verification.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/cognitive_loop/verification.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 conversation runtime"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/connectors/__init__.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/connectors/__init__.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/connectors/base.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/connectors/base.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/connectors/gitea.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/connectors/gitea.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/connectors/local_files.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/connectors/local_files.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted and cleaned from the GRND0 retrieval runtime"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/connectors/registry.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/connectors/registry.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/connectors/vector_http.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/connectors/vector_http.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/connectors/web.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/connectors/web.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/config.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/config.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/harness_registry.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/harness_registry.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/main.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/main.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/orchestrator_daemon/app/store.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/orchestrator_daemon/app/store.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/web_research/Dockerfile",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/web_research/Dockerfile",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/web_research/app/__init__.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/web_research/app/__init__.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "services/web_research/app/main.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/services/web_research/app/main.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "tests/test_public_surface.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/tests/test_public_surface.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "tools/bootstrap-env.ps1",
+      "license": "MPL-2.0",
+      "path": "release/sources/tools/bootstrap-env.ps1",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "tools/clean-install.ps1",
+      "license": "MPL-2.0",
+      "path": "release/sources/tools/clean-install.ps1",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "tools/grnd0_models.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/tools/grnd0_models.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for deterministic pack download and inference configuration"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "tools/start-local-inference-gpu.ps1",
+      "license": "MPL-2.0",
+      "path": "release/sources/tools/start-local-inference-gpu.ps1",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted from the native host llama-swap launcher; private lane recipes and residency control removed"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "tools/start-wsl-model.ps1",
+      "license": "MPL-2.0",
+      "path": "release/sources/tools/start-wsl-model.ps1",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "extracted from the WSL model launcher; model-specific setup, paths, recipes, and runtime-state integration removed"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "tools/export-receipt.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/tools/export-receipt.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "tools/leak-gate.py",
+      "license": "MPL-2.0",
+      "path": "release/sources/tools/leak-gate.py",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      },
+      "transforms": [
+        "header_inject"
+      ]
+    },
+    {
+      "dest": "uv.lock",
+      "path": "release/sources/uv.lock",
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "generated by uv 0.9.8"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/01.png",
+      "path": "release/sources/assets/showcase/captures/01.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/02.png",
+      "path": "release/sources/assets/showcase/captures/02.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/03.png",
+      "path": "release/sources/assets/showcase/captures/03.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/04.png",
+      "path": "release/sources/assets/showcase/captures/04.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/05.png",
+      "path": "release/sources/assets/showcase/captures/05.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/06.png",
+      "path": "release/sources/assets/showcase/captures/06.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/07.png",
+      "path": "release/sources/assets/showcase/captures/07.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/08.png",
+      "path": "release/sources/assets/showcase/captures/08.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/09.png",
+      "path": "release/sources/assets/showcase/captures/09.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/10.png",
+      "path": "release/sources/assets/showcase/captures/10.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/11.png",
+      "path": "release/sources/assets/showcase/captures/11.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/12.png",
+      "path": "release/sources/assets/showcase/captures/12.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/13.png",
+      "path": "release/sources/assets/showcase/captures/13.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/14.png",
+      "path": "release/sources/assets/showcase/captures/14.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/15.png",
+      "path": "release/sources/assets/showcase/captures/15.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "assets/showcase/captures/16.png",
+      "path": "release/sources/assets/showcase/captures/16.png",
+      "text": false,
+      "provenance": {
+        "classification": "B",
+        "license": "MPL-2.0",
+        "modifications": "chat-client screenshot of a live GRND0 session; image metadata stripped for release"
+      }
+    },
+    {
+      "dest": "RELEASING.md",
+      "path": "release/sources/RELEASING.md",
+      "provenance": {
+        "classification": "A",
+        "license": "MPL-2.0",
+        "modifications": "written for GRND0 public release"
+      }
+    }
+  ],
+  "release": "0.0.1",
+  "replacements": {},
+  "report_path": "artifacts/leak-gate-report.json",
+  "schema": "grnd0.release-manifest.v1",
+  "waivers": []
+}
